@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+   nn tt;
+   cin>>tt;
+   while(tt--)
+   {
+       nn x;
+       cin>>x;
+       if(x%12==1) cout<<x+11;
+        if(x%12==0) cout<<x-11;
+         if(x%12==6) cout<<x+1;
+          if(x%12==7) cout<<x-1;
+           if(x%12==2) cout<<x+9;
+            if(x%12==5) cout<<x+3;
+             if(x%12==8) cout<<x-3;
+              if(x%12==11) cout<<x-9;
+               if(x%12==3) cout<<x+7;
+                if(x%12==4) cout<<x+5;
+                 if(x%12==9) cout<<x-5;
+                  if(x%12==10) cout<<x-7;
+       if(x%12==1 || x%12==6 ||  x%12==7 ||  x%12==0) cout<<" WS"<<endl;
+       else if(x%12==2 || x%12==5 ||  x%12==8 ||  x%12==11)  cout<<" MS"<<endl;
+        else if(x%12==3 || x%12==4 ||  x%12==9 ||  x%12==10)  cout<<" AS"<<endl;
+
+   }
+
+
+}

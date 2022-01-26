@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+      ll a,b,x=1;
+      cin>>a>>b;
+      while(b!=0)
+      {
+          if(b%2==0)
+          {
+              a=(a*a)%1000000007;
+              b/=2;
+          }
+          else{
+                x=(x*a)%1000000007;
+                b--;
+          }
+      }
+      cout<<x<<endl;
+
+}
+

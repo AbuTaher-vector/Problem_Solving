@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+       nn tt;
+       cin>>tt;
+       while(tt--)
+       {
+           nn a,b,c,d,h,m;
+           cin>>a>>b>>c>>d;
+          if(a<=c && b<=d) h=c-a,m=d-b;
+          else if(a<=c && b>d) h=c-a-1,m=60-b+d;
+            else if(a>c && b<=d) h=12-a+c,m=d-b;
+          else if(a>c && b>d) h=12-a+c-1,m=60-b+d;
+          cout<<h<<" "<<m<<endl;
+       }
+
+
+
+}

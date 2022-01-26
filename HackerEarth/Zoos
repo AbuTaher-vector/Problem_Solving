@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+       ss s;
+       cin>>s;
+       nn cnt=0,cnt2=0;
+       for(nn i=0;i<s.size();i++)
+       {
+           if(s[i]=='z') cnt++;
+           else cnt2++;
+       }
+       if(cnt*2==cnt2) cout<<"Yes"<<endl;
+       else cout<<"No"<<endl;
+
+
+}

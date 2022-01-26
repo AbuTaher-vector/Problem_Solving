@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define mod 1000003
+
+int main() {
+	int testCases;
+	long long n, x;
+	long long arr[mod + 1] = {0};
+	arr[0] = 0;
+	arr[1] = 1;
+
+	for(long long i = 2; i <= mod; i++) arr[i] = ((i%mod)*arr[i-1])%mod;
+
+	cin >> testCases;
+	while(testCases--){
+		cin >> n >> x;
+		if (n > mod) n = 0;
+		cout << (arr[n] * x%mod)%mod << "\n";
+	}
+
+}

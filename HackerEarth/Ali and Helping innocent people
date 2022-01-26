@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+       ss s;
+       cin>>s;
+       vector<nn>v1;
+       vector<char>v2;
+       nn flag,fflag,ffflag;
+       for(nn i=0;i<s.size();i++)
+       {
+           if(s[i]>=48 && s[i]<=57) v1.push_back(s[i]-'0');
+           else if(s[i]>=65 && s[i]<=90) v2.push_back(s[i]);
+       }
+       for(nn i=0;i<v1.size()-1;i++)
+       {
+           if(i==1) i++;
+           if(i==4) i++;
+           if((v1[i]+v1[i+1])%2==0) flag=1;
+           else
+           {
+               flag=0;
+               break;
+           }
+       }
+       if(v2[0]=='A' || v2[0]=='E' || v2[0]=='I' || v2[0]=='O' || v2[0]=='U' || v2[0]=='Y') fflag=0;
+       else fflag=1;
+
+       if(flag==1 && fflag==1) cout<<"valid"<<endl;
+       else cout<<"invalid"<<endl;
+
+}

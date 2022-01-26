@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+   nn l,n;
+   cin>>l>>n;
+   while(n--)
+   {
+       nn w,h;
+       cin>>w>>h;
+       if(w<l || h<l) cout<<"UPLOAD ANOTHER"<<endl;
+       else if(w==h && l<=w) cout<<"ACCEPTED"<<endl;
+       else cout<<"CROP IT"<<endl;
+
+   }
+
+}

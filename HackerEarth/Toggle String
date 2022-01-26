@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+   ss s;
+   cin>>s;
+   for(nn i=0;i<s.size();i++)
+   {
+       if(s[i]>='A' && s[i]<='Z') s[i]+=32;
+       else s[i]-=32;
+   }
+   cout<<s<<endl;
+
+}

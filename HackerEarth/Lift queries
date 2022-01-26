@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+  nn tt,a=0,b=7;
+  cin>>tt;
+  while(tt--)
+  {
+      nn n;
+      cin>>n;
+      nn k=abs(n-a);
+      nn l=abs(n-b);
+      if(k<=l)
+      {
+          cout<<"A"<<endl;
+          a=n;
+      }
+       else
+      {
+          cout<<"B"<<endl;
+          b=n;
+      }
+
+  }
+
+}

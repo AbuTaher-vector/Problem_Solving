@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+ll p[1000005]={0};
+//prime_seive_algorithm
+void prime_seive()
+{
+       for(ll i=3;i<1000005;i+=2) p[i]=1;
+
+       for(ll i=3;i<1000005;i+=2)
+       {
+           if(p[i]==1)
+           {
+               for(ll j=i*i;j<1000005;j+=i) p[j]=0;
+           }
+       }
+       p[2]=1;
+       p[1]=p[0]=0;
+
+}
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+         nn cnt=0;
+         prime_seive();
+         nn l,r;
+         cin>>l>>r;
+         nn mx=max(l,r);
+         nn mn=min(l,r);
+         for(nn i=mn;i<=mx;i++)
+         {
+             if(p[i]==1) cnt++;
+         }
+         cout<<cnt<<endl;
+    }
+
+
+
+}

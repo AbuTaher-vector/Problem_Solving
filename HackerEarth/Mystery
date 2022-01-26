@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+         nn x,cnt=0;
+         cin>>x;
+         set<nn>s;
+         for(nn i=1;i<=sqrt(x);i++)
+         {
+             if(x%i==0) {
+                s.insert(i);
+                s.insert(x/i);
+             }
+         }
+
+         cout<<s.size()<<endl;
+
+     }
+
+}
+
+

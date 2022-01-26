@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+ss arr[1000005];
+int main()
+{
+       nn tt;
+       cin>>tt;
+       for(nn i=0;i<tt;i++) cin>>arr[i];
+       ss s=arr[tt-1];
+       nn t=s.size();
+       if(s[t-1]=='0') cout<<"Yes"<<endl;
+       else cout<<"No"<<endl;
+
+}

@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+      ss s;
+      cin>>s;
+      nn k=s.size(),flag=1;
+      for(nn i=0,j=k-1;i<k,j>=0;i++,j--)
+      {
+          if(s[i]!=s[j])
+          {
+              flag=0;
+              break;
+          }
+      }
+      if(flag==1) cout<<"YES"<<endl;
+      else cout<<"NO"<<endl;
+
+
+}

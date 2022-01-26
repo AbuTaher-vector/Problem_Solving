@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+   nn tt,m;
+   cin>>tt;
+   nn arr[tt+1];
+   for(nn i=0;i<tt;i++) cin>>arr[i];
+   int mx=*max_element(arr,arr+tt);
+   for(nn i=2;i<mx/2;i++)
+   {
+       nn k=arr[0]%i,cnt=1;
+       for(nn j=1;j<tt;j++)
+       {
+           if(arr[j]%i==k) cnt++;
+           else break;
+       }
+       if(cnt==tt) cout<<i<<" ";
+
+   }
+  cout<<endl;
+
+}

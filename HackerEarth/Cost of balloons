@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+         nn a,b,y,z,x,cnt=0,cnt2=0;
+         cin>>a>>b>>x;
+         while(x--)
+         {
+             cin>>y>>z;
+             if(y==1) cnt++;
+             if(z==1) cnt2++;
+         }
+         cout<<min(cnt,cnt2)*max(a,b)+max(cnt,cnt2)*min(a,b)<<endl;
+     }
+
+
+}

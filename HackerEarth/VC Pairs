@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+  nn tt;
+  cin>>tt;
+  while(tt--)
+  {
+       ss s;
+       nn t,cnt=0;
+       cin>>t>>s;
+       for(nn i=0;i<s.size()-1;i++)
+       {
+           if( s[i]!='a' && s[i]!='e' && s[i]!='i' && s[i]!='o' && s[i]!='u' )
+           {
+                if( s[i+1]=='a' || s[i+1]=='e' || s[i+1]=='i' || s[i+1]=='o' || s[i+1]=='u' ) cnt++;
+           }
+       }
+       cout<<cnt<<endl;
+  }
+
+}

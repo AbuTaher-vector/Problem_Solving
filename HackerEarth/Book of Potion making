@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+      ss s;
+      cin>>s;
+      nn sum=0;
+      for(nn i=0;i<s.size();i++) sum+=((s[i]-'0')*(i+1));
+      if(sum%11==0) cout<<"Legal ISBN"<<endl;
+      else cout<<"Illegal ISBN"<<endl;
+
+
+}

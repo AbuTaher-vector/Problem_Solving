@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+   nn tt;
+   cin>>tt;
+   if(tt%5==0) cout<<tt/5<<endl;
+   else cout<<(tt/5)+1<<endl;
+
+
+}
+© 2022 Git

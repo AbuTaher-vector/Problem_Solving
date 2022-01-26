@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+         nn t;
+         cin>>t;
+         for(nn i=1;i<=t;i++)
+         {
+             for(nn j=1;j<=t*2;j++)
+             {
+                 if(i>=j || j>(t*2-i)) cout<<"*";
+                 else cout<<"#";
+             }
+             cout<<endl;
+         }
+         cout<<endl;
+     }
+
+
+}

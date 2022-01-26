@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+     ll n,q,a;
+     cin>>n>>q;
+     ll arr[n+1];
+     arr[0]=0;
+     for(nn i=1;i<=n;i++)
+     {
+         cin>>a;
+         arr[i]=a+arr[i-1];
+     }
+     while(q--)
+     {
+         ll x,y;
+         cin>>x>>y;
+         nn k=y-x+1;
+       cout<<(arr[y]-arr[x-1])/k<<endl;
+     }
+
+
+
+
+}
+

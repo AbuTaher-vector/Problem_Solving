@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define m 1000000007
+int main()
+{
+    nn tt;
+    cin>>tt;
+    nn arr[tt+1];
+    ll sum=1;
+    for(nn i=0;i<tt;i++)
+    {
+        cin>>arr[i];
+        sum=(sum*arr[i])%m;
+    }
+    cout<<sum<<endl;
+
+}
+

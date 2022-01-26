@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+     nn tt,n;
+     ss s;
+     cin>>tt;
+     while(tt--)
+     {
+         cin>>n>>s;
+         for(nn i=0;i<s.size();i++)
+         {
+            if(s[i]<=69) cout<<(char)67;
+            else if(s[i]>=70 && s[i]<=72) cout<<(char)71;
+              else if(s[i]>=73 && s[i]<=76) cout<<(char)73;
+                 else if(s[i]>=77 && s[i]<=81) cout<<(char)79;
+               else if(s[i]>=82 && s[i]<=86) cout<<(char)83;
+                  else if(s[i]>=87 && s[i]<=93) cout<<(char)89;
+                     else if(s[i]>=94 && s[i]<=99) cout<<(char)97;
+                        else if(s[i]>=100 && s[i]<=102) cout<<(char)101;
+                           else if(s[i]>=103 && s[i]<=105) cout<<(char)103;
+                              else if(s[i]>=106 && s[i]<=108) cout<<(char)107;
+                                 else if(s[i]>=109 && s[i]<=111) cout<<(char)109;
+                                    else if(s[i]>=112) cout<<(char)113;
+
+        }
+        cout<<endl;
+
+     }
+}

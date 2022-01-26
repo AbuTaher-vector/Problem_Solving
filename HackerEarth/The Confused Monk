@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define M 1000000007
+int main()
+{
+    ll tt,mul=1,g=0,ans=1;
+    cin>>tt;
+    ll arr[tt+1];
+    for(ll i=0;i<tt;i++)
+    {
+        cin>>arr[i];
+        mul=(mul*arr[i])%M;
+    }
+    if(tt==1)  g=arr[0];
+    else{
+        g=__gcd(arr[0],arr[1]);
+        for(ll i=2;i<tt;i++)
+        {
+            g=__gcd(g,arr[i]);
+            if(g==1) break;
+        }
+    }
+    while(g>0)
+        {
+            ans=(ans*mul)%M;
+            g--;
+        }
+        cout<<ans<<endl;
+}
