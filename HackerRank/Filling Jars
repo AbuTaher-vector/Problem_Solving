@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    ll n,m;
+    cin>>n>>m;
+    ll sum = 0;
+    while(m--)
+    {
+    	ll a,b,k;
+    	cin>>a>>b>>k;
+    	nn idx = b-a+1;
+    	sum+=(idx * k);
+
+    }
+    cout<<sum/n<<endl;
+
+
+}

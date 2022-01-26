@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    nn x;
+    while(tt--)
+    {
+        vector<nn>v;
+        cin>>x;
+        for(nn i=1;i<=sqrt(x);i++)
+        {
+            if(x%i==0)
+            {
+                v.push_back(i);
+                 if(i!=x/i) v.push_back(x/i);
+            }
+        }
+        nn cnt=0;
+         for(nn i=0;i<v.size();i++)   if(v[i]%2==0) cnt++;
+        cout<<cnt<<endl;
+
+    }
+
+}

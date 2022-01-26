@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+map<char,nn>mp={{'(',-1},{'{',-2},{'[',-3},{')',1},{'}',2},{']',3}};
+ss check(ss s)
+{
+  stack<char>st;
+  for(nn i=0;i<s.size();i++)
+  {
+     if(mp[s[i]]<0) st.push(s[i]);
+     else
+     {
+        if(st.empty()) return "NO";
+         char x = st.top();
+         st.pop();
+         if(mp[x]+mp[s[i]]!=0) return "NO";
+     }
+      
+
+  }
+  if(st.empty()) return "YES";
+  else return "NO";
+
+
+}
+int main()
+{
+  nn n;
+  cin>>n;
+  while(n--)
+  {
+    ss s;
+    cin>>s;
+    cout<<check(s)<<"\n";
+  }
+}

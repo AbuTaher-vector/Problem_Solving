@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    ll c,r;
+    cin>>c>>r;
+   if(c%2!=0)
+   {
+       c/=2;
+    r--;
+    cout<<c*10+r*2<<endl;
+   }
+   else{
+        c/=2;
+        c--,r--;
+        cout<<c*10+1+r*2<<endl;
+
+   }
+
+
+}

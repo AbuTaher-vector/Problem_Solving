@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    nn x;
+    while(tt--)
+    {
+
+        ll k;
+        cin>>k;
+        ll p=k/2;
+        if(k%2!=0) cout<<p*p+p<<endl;
+        else cout<<p*p<<endl;
+
+    }
+
+}

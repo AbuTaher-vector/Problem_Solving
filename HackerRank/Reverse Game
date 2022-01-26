@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+        nn n,k;
+        cin>>n>>k;
+        nn arr[n];
+        vector<nn>v;
+        for(nn i=0;i<n;i++) arr[i]=i;
+        nn cnt=n/2;
+        nn m=0,l=n-1,x=0;
+        while(1)
+        {
+            v.push_back(arr[l]);
+            v.push_back(arr[m]);
+            x++,m++,l--;
+            if(x==cnt) break;
+            }
+         if(n%2!=0) v.push_back(arr[cnt]);
+         for(nn i=0;i<v.size();i++) {
+            if(v[i]==k)
+            {
+                cout<<i<<endl;
+                break;
+            }
+         }
+
+    }
+
+}
+

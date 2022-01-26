@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+        nn l,b;
+        cin>>l>>b;
+        nn t=l*b;
+        nn k=__gcd(l,b);
+        k*=k;
+       cout<<t/k<<endl;
+    }
+
+}

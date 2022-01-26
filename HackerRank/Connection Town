@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,x,i;
+    cin>>t;
+    while(t--)
+    {
+        cin>>x;
+        int arr[x],mul=1;
+        for(i=0;i<x-1;i++)
+        {
+            cin>>arr[i];
+            mul*=arr[i];
+            mul=mul%1234567;
+        }
+        cout<<mul<<endl;
+    }
+}
