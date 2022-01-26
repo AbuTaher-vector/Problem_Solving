@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int code()
+{
+	ll t;
+	cin>>t;
+	if(t%2!=0) 
+	{
+		cout<<t/2<<"\n";
+		return 0;
+	}
+	else
+	{
+		while(1)
+		{
+			t/=2;
+			if(t%2!=0)
+			{
+				t--;
+				cout<<t/2<<"\n";
+				return 0;
+			}
+		}
+
+
+	}
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+ 
+}

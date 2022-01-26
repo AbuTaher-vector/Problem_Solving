@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+int code()
+{
+   nn n;
+   ss s;
+   ss a;
+   cin>>n>>s;
+   for(nn i=0;i<s.size();i++)
+   {
+      if(isalpha(s[i]))
+      {
+         a.push_back(s[i]);
+      }
+
+   }
+   nn pos=-1;
+   ss k="HT";
+   nn cnt=0;
+   while(1)
+   {
+      pos=a.find(k,pos+1);
+      if(pos!=-1) cnt++;
+      else break;
+   }
+   if(cnt*2==a.size()) cout<<"Valid"<<nl;
+   else cout<<"Invalid"<<nl;
+   return 0;
+
+
+}
+int main()
+{
+  nn tt;
+  cin>>tt;
+  while(tt--) code();
+}

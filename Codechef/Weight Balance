@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+      
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+       nn w1,w2,x1,x2,m;
+       cin>>w1>>w2>>x1>>x2>>m;
+
+       nn k=w2-w1;
+
+       if(k<x1*m || k>x2*m) cout<<0<<endl;
+       else cout<<1<<endl;
+     }
+    
+}

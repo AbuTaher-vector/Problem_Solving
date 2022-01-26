@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+    nn n;
+     cin>>n;
+     nn a[n+1],b[n+1];
+     for(nn i=0;i<n;i++) cin>>a[i];
+     for(nn i=0;i<n;i++) cin>>b[i];
+     nn one=10000000,two=10000000,three=10000000;
+     for(nn i=0;i<n;i++)
+     {
+          if(b[i]==1) one=min(one,a[i]);
+          else if(b[i]==2) two=min(two,a[i]);
+          else  three=min(three,a[i]);
+     }
+   cout<<min(one+two,three)<<nl;
+}

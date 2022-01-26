@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+        nn h,x;
+        cin>>h>>x;
+        if(h>=x) cout<<"Yes"<<endl;
+        else cout<<"No"<<endl;
+    }
+
+
+
+}

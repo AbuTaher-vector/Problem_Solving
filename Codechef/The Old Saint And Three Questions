@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+void code()
+{
+   nn k=3;
+   nn q;
+   nn one=0,zero=0,one1=0,zero1=0;
+   while(k--)
+   {
+    cin>>q;
+    if(q==1) one++;
+    else zero++;
+   }
+   k=3;
+   while(k--)
+   {
+    cin>>q;
+    if(q==1) one1++;
+    else zero1++;
+   }
+   if(one==one1 && zero==zero1) cout<<"Pass\n";
+   else cout<<"Fail\n";
+}
+int main()
+{
+   nn tt;
+   cin>>tt;
+   while(tt--) code();
+}

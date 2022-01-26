@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+         nn n,k,m;
+         cin>>n>>k>>m;
+         nn x,a=k,b=m;
+         set<nn>s;
+         while(k--)
+         {
+             cin>>x;
+             s.insert(x);
+         }
+         while(m--)
+         {
+             cin>>x;
+             s.insert(x);
+         }
+         cout<<a+b-s.size()<<" "<<n-s.size()<<endl;
+     }
+
+
+
+}

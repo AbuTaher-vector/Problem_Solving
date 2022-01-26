@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+  nn tt;
+  cin>>tt;
+  while(tt--)
+  {
+      nn n,d,cnt=0,cntt=0;
+      cin>>n>>d;
+      for(nn i=0;i<n;i++)
+      {
+          nn x;
+          cin>>x;
+          if(x>=80 || x<=9) cnt++;
+          else cntt++;
+      }
+      nn day1=cnt/d;
+      nn day2=cntt/d;
+      if(cnt%d!=0) day1++;
+       if(cntt%d!=0) day2++;
+       cout<<day1+day2<<endl;
+
+  }
+
+
+}

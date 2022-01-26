@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int code()
+{
+	nn a,b,c,d,k;
+	cin>>a>>b>>c>>d>>k;
+	nn sum=0;
+	sum+=abs(a-c);
+	sum+=abs(b-d);
+	if(sum>k)
+	{
+		cout<<"NO\n";
+		return 0;
+
+	} 
+	k-=sum;
+	if(k%2==0) cout<<"YES\n";
+	else cout<<"NO\n";
+	return 0;
+
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+
+}

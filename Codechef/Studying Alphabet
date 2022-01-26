@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+     ss s1,s2;
+     nn tt,arr[26]={0};
+     cin>>s1>>tt;
+     for(nn i=0;i<s1.size();i++) arr[s1[i]-97]=1;
+    while(tt--)
+    {
+        nn cnt=0;
+        cin>>s2;
+        for(nn i=0;i<s2.size();i++) if(arr[s2[i]-97]==0) cnt++;
+        if(cnt>0) cout<<"No"<<endl;
+        else cout<<"Yes"<<endl;
+
+    }
+
+
+
+}

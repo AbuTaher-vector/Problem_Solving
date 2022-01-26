@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+     nn arr[15]={0};
+     nn n,x,y;
+     cin>>n;
+     while(n--)
+     {
+          cin>>x>>y;
+          x--;
+          arr[x]=max(arr[x],y);
+     }
+     nn sum=0;
+     for(nn i=0;i<8;i++) sum+=arr[i];
+          cout<<sum<<nl;
+}
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}
