@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define dd double
+int main()
+{
+    int tt;
+    cin>>tt;
+    while(tt--)
+    {
+        dd x,salary;
+         cin>>x;
+         if(x<1500)  salary=x+(x*.1)+(x*.9);
+         else  salary = x+500+(x*.98);
+         printf("%.2lf\n",salary);
+    }
+}

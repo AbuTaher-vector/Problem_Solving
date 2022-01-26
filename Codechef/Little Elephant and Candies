@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+      nn n,q;
+     cin>>n>>q;
+     nn x;
+     nn sum=0;
+     while(n--)
+     {
+          cin>>x;
+          sum+=x;
+     }
+     if(sum<=q) cout<<"Yes"<<nl;
+     else cout<<"No"<<nl;
+ 
+
+}
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}

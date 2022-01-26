@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+int cmp(pair<ll,ll>a,pair<ll,ll>b)
+{
+    return a.second<b.second;
+}
+void code()
+{
+  ll n,k;
+  cin>>n>>k;
+  map<ll,ll>mp;
+  ll q;
+  for(ll i=0;i<n;i++)
+  {
+      cin>>q;
+      mp[q]=i;
+
+  } 
+
+  vector<pair<ll,ll>>v(mp.begin(),mp.end());
+    reverse(v.begin(),v.end());
+    vector<ll>v1;
+     for(ll i=0;i<k;i++) v1.push_back(v[i].first);
+        reverse(v1.begin(),v1.end());
+     ll w;
+     if(k%2==1) w=k/2;
+     else w=k/2-1;
+     cout<<v1[w]<<nl;
+     sort(v.begin(),v.begin()+k,cmp);
+     for(ll i=0;i<k;i++) cout<<v[i].first<<" ";
+        cout<<nl;
+
+
+
+
+}
+int main()
+{
+   nn tt;
+   cin>>tt;
+   while(tt--) code();
+}

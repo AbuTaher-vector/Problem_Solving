@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+void code()
+{
+	nn a,b,c,d,e,f,g;
+	cin>>a>>b>>c>>d>>e>>f>>g;
+	if(a>e || b>f || c>g || e+f+g<d) cout<<"NO\n";
+	else cout<<"YES\n";
+
+
+
+	
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+  
+}

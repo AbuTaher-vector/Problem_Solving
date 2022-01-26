@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    if(tt<=50) cout<<100<<endl;
+    else if(tt>50 && tt<=100) cout<<50<<endl;
+    else cout<<0<<endl;
+}
+
+

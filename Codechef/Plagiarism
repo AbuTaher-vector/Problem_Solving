@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int code()
+{
+	nn n,m,k;
+	cin>>n>>m>>k;
+	nn arr[n+m]={0};
+	nn a[k+1];
+	for(nn i=0;i<k;i++) cin>>a[i];
+		sort(a,a+k);
+	vector<nn>v;
+	for(nn i=0;i<k;i++)
+	{
+		if(a[i]>n) break;
+		nn x=a[i];
+		arr[x]++;
+		if(arr[x]==2) v.push_back(a[i]);
+
+	}
+	cout<<v.size()<<" ";
+	for(nn i=0;i<v.size();i++) cout<<v[i]<<" ";
+		cout<<"\n";
+	return 0;
+	
+	
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+}

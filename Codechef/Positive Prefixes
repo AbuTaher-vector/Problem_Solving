@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+        nn n,k,neg=0;
+        cin>>n>>k;
+        nn x=k;
+        nn pos=n/2;
+        if(k>pos)
+        {
+            neg=k-pos;
+            k=pos;
+        }
+
+        vector<nn>v;
+        for(nn i=1;i<=n;i++) v.push_back(-1*i);
+        nn l=1,h;
+       if(n%2==0) h=v.size()-2;
+       else h=v.size()-1;
+        while(k--)
+        {
+             v[l]=v[l]*-1;
+            l+=2;
+        }
+        while(neg--)
+        {
+             v[h]=v[h]*-1;
+            h-=2;
+        }
+        for(nn i=0;i<v.size();i++) cout<<v[i]<<" ";
+        cout<<endl;
+    }
+
+
+
+
+}

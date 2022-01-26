@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+void code()
+{
+     nn a,b,p,q;
+     cin>>a>>b>>p>>q;
+     if(a==p && b==q) cout<<0<<nl;
+     else
+     {
+          nn x=(a+b)%2;
+          nn y=(p+q)%2;
+          if(x==y) cout<<2<<nl;
+          else cout<<1<<nl;
+     }
+}
+int main()
+{
+  nn tt;
+  cin>>tt;
+  while(tt--) code();
+     
+    
+}

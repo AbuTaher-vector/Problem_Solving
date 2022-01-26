@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+         nn a,b,cnt=0;
+         cin>>a>>b;
+         a+=b;
+         while(a>0)
+         {
+             nn k=a%10;
+             a/=10;
+             if(k==0 || k==6 || k==9) cnt+=6;
+            else if(k==2 || k==3 || k==5) cnt+=5;
+            else  if(k==8) cnt+=7;
+            else   if(k==1) cnt+=2;
+            else   if(k==4) cnt+=4;
+            else  if(k==7) cnt+=3;
+         }
+         cout<<cnt<<endl;
+     }
+
+
+}

@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+   nn  tt,a=0,b=0;
+   cin>>tt;
+   while(tt--)
+   {
+       nn x=0,y=0;
+       ss s;
+       cin>>s;
+       for(nn i=0;i<s.size();i++)
+       {
+           if(s[i]=='a') x++;
+           else if(s[i]=='b') y++;
+       }
+       if(x==s.size() || y==s.size()) cout<<0<<endl;
+       else if(x>y) cout<<y<<endl;
+       else if(y>x) cout<<x<<endl;
+       else cout<<x<<endl;
+
+   }
+}

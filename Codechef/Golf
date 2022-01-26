@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+void code()
+{
+    nn n,x,k;
+    cin>>n>>x>>k;
+    n++;
+    if(x%k==0 || (n-x)%k==0) cout<<"YES"<<nl;
+    else cout<<"NO"<<nl;
+    
+}
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--) code();
+   
+}

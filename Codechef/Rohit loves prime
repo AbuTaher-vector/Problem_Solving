@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int prime(nn t)
+{
+    nn flag=1;
+    for(nn i=2;i<=sqrt(t);i++)
+    {
+        if(t%i==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag) return 1;
+    else return 0;
+}
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+         nn k,l;
+         cin>>k>>l;
+       vector<nn>v1;
+    for(nn i=k;i<=l;i++)
+    {
+        if(prime(i) && i!=1)
+        {
+           v1.push_back(i);
+        }
+    }
+    sort(v1.begin(),v1.end());
+    for(nn i=0;i<v1.size();i++) cout<<v1[i]<<" ";
+    cout<<endl;
+
+    }
+
+
+
+
+}

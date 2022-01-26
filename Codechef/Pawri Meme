@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+       ss s;
+       cin>>s;
+       if(s.size()<5) cout<<s<<endl;
+       else 
+       {     
+
+           for(nn i=0;i<s.size();i++)
+             {
+
+             if(s[i]=='p' && s[i+1]=='a' && s[i+2]=='r' && s[i+3]=='t' && s[i+4] == 'y')
+               { 
+                s[i+2]='w',s[i+3]='r',s[i+4]='i';
+
+                 i+=4;
+              }
+
+
+  
+                }
+                cout<<s<<endl;
+
+       }
+       
+     }
+
+    
+    
+}

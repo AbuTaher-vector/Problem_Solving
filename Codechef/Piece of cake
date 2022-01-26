@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+  nn tt;
+  cin>>tt;
+  while(tt--)
+  {
+      ss s;
+      cin>>s;
+      nn c=0,cnt=0;
+      if(s.size()%2!=0) cout<<"NO"<<endl;
+      else
+      {
+         for(nn i=0;i<s.size();i++)
+         {
+             for(nn j=0;j<s.size();j++)
+             {
+                 if(s[i]==s[j]) cnt++;
+             }
+             c=max(c,cnt);
+             cnt=0;
+         }
+         if(c==s.size()/2) cout<<"YES"<<endl;
+         else cout<<"NO"<<endl;
+      }
+
+  }
+
+
+
+}

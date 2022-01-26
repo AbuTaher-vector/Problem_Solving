@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int code()
+{
+	nn x;
+	cin>>x;
+	x/=2;
+	cout<<x+1<<"\n";
+	return 0;
+
+
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+
+}

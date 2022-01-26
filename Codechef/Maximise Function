@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+       nn tt;
+       cin>>tt;
+       while(tt--)
+       {
+           nn t;
+           cin>>t;
+           nn arr[t+1];
+           for(nn i=0;i<t;i++) cin>>arr[i];
+           sort(arr,arr+t);
+            ll sum=0;
+            sum+=arr[t-1]-arr[0];
+            sum+=arr[t-1]-arr[t-2];
+            sum+=arr[t-2]-arr[0];
+            cout<<sum<<endl;
+       }
+
+}

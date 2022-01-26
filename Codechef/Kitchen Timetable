@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+      nn tt;
+      cin>>tt;
+      while(tt--)
+      {
+          nn x,cnt=0;
+          cin>>x;
+          nn A[x+1],B[x+1];
+          for(nn i=0;i<x;i++) cin>>A[i];
+          for(nn i=0;i<x;i++) cin>>B[i];
+          if(A[0]>=B[0]) cnt++;
+          for(nn i=0,j=1;i<x-1,j<x;i++,j++)
+          {
+              nn k=A[i+1]-A[i];
+              if(k>=B[j]) cnt++;
+          }
+          cout<<cnt<<endl;
+      }
+
+
+
+}

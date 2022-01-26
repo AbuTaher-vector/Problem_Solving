@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+        ll n,b,m,cnt=0,w=1;
+        cin>>n>>b>>m;
+        while(n!=0)
+        {
+            nn k=(n+1)/2;
+            n-=k;
+            if(n!=0) cnt+=b;
+            cnt+=(m*k*w);
+            w*=2;
+        }
+        cout<<cnt<<endl;
+
+    }
+
+}
