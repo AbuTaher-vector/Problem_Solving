@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+    nn n,x;
+    cin>>n;
+    map<nn,nn>mp;
+    for(nn i=1;i<4*n;i++)
+    {
+        cin>>x;
+        mp[x]++;    
+    }
+    for(auto a:mp) 
+    {
+        if(a.second==3) 
+        {
+            cout<<a.first<<nl;
+            return 0;
+        }
+    }
+ 
+   
+}

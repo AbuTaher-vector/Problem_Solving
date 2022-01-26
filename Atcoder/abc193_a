@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+       dd a,b;
+       cin>>a>>b;
+       dd k=a-b;
+       dd ans=(k/a)*100;
+        printf("%lf\n",ans);
+}
+ 
+ 

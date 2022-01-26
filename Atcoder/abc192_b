@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    ss s;
+    cin>>s;
+    nn even=0,odd=0;
+    for(nn i=0;i<s.size();i++)
+    {
+        if(i%2==0)
+        {
+             if( s[i]>='a' && s[i]<='z')  even++;
+ 
+        }
+        if(i%2!=0)
+        {
+            if( s[i]>='A' && s[i]<='Z') odd++;
+ 
+ 
+        }
+ 
+    }
+ 
+  if(even+odd==s.size()) cout<<"Yes"<<endl;
+  else cout<<"No"<<endl;
+}

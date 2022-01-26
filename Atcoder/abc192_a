@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn n;
+    cin>>n;
+    nn l=n%100;
+  cout<<100-l<<endl;
+ 
+}

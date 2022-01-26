@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+      nn tt;
+      cin>>tt;
+      nn arr[tt+1],ar[tt+1];
+      nn mn=1000000000,mn1=1000000000,mn2=1000000000;
+      for(nn i=0;i<tt;i++)
+      {
+          cin>>arr[i]>>ar[i];
+          mn=min(mn,arr[i]+ar[i]);
+      }
+      for(nn i=0;i<tt;i++)
+      {
+         for(nn j=0;j<tt;j++)
+         {
+             if(i==j) continue;
+             mn1=min(mn1,max(arr[i],ar[j]));
+			mn2=min(mn2,max(ar[i],arr[j]));
+         }
+      }
+      cout<<min(mn,min(mn1,mn2))<<endl;
+}

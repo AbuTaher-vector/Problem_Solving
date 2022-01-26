@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+	ll x;
+	cin>>x;
+	ll a[x+1];
+	ll ar[x+1];
+	ll arr[x+1];
+	ll freq[x+1]={0};
+	for(ll i=0;i<x;i++) cin>>a[i];
+		for(ll i=0;i<x;i++) cin>>ar[i];
+			for(ll i=0;i<x;i++)
+			{
+				cin>>arr[i];
+				ll k=ar[arr[i]-1];
+				freq[k]++;
+ 
+ 
+			} 
+				ll cnt=0;
+				for(nn i=0;i<x;i++) cnt+=freq[a[i]];
+					cout<<cnt<<"\n";
+       
+ 
+}

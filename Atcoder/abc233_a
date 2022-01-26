@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+     nn x,y;
+     cin>>x>>y;
+     if(x>=y) cout<<0<<nl;
+     else
+     {
+          nn k=y-x;
+          nn ans=k/10;
+          if(k%10!=0) ans++;
+          cout<<ans<<nl;
+     }
+    
+}

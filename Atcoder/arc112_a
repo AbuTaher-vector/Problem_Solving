@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    ll tt;
+    cin>>tt;
+    while(tt--)
+    {
+        ll a,b;
+        cin>>a>>b;
+        ll k=a*2;
+        ll e=b-k;
+        if(e<0) cout<<0<<endl;
+        else{
+           ll k = (e*(e+1))/2;
+           ll w=e+1;
+           cout<<k+w<<endl;
+        }
+ 
+    }
+ 
+ 
+}

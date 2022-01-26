@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{ 
+    nn n;
+    cin>>n;
+    if(n>=42) n++;
+    if(n<10) cout<<"AGC00"<<n<<nl;
+    else cout<<"AGC0"<<n<<nl;
+   
+}

@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+	nn a,b,c;
+	cin>>a>>b>>c;
+	nn sum=0;
+	if(a==1) sum+=6;
+	if(b==1) sum+=6;
+	if(c==1) sum+=6;
+	if(a==2) sum+=5;
+	if(b==2) sum+=5;
+	if(c==2) sum+=5;
+	if(a==3) sum+=4;
+	if(b==3) sum+=4;
+	if(c==3) sum+=4;
+	if(a==4) sum+=3;
+	if(b==4) sum+=3;
+	if(c==4) sum+=3;
+	if(a==5) sum+=2;
+	if(b==5) sum+=2;
+	if(c==5) sum+=2;
+	if(a==6) sum+=1;
+	if(b==6) sum+=1;
+	if(c==6) sum+=1;
+	cout<<sum<<endl;
+ 
+ 
+}

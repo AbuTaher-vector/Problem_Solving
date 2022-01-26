@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+int main()
+{
+    vector<nn>v;
+    nn q;
+    for(nn i=0;i<26;i++)
+    {
+        cin>>q;
+        v.push_back(q);
+    }
+    for(nn i=0;i<26;i++)
+    {
+       printf("%c",96+v[i]);
+    
+    }
+ 
+}

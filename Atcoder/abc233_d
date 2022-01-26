@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+   ll n,k;
+   cin>>n>>k;
+   ll arr[n+1];
+   for(ll i=0;i<n;i++) cin>>arr[i];
+    unordered_map<ll, ll> prevSum;
+ 
+    ll res = 0;
+ 
+    ll currsum = 0;
+ 
+    for (ll i = 0; i < n; i++) {
+ 
+        currsum += arr[i];
+ 
+        if (currsum == k)
+            res++;
+ 
+        if (prevSum.find(currsum - k) != prevSum.end())
+            res += (prevSum[currsum - k]);
+        prevSum[currsum]++;
+   }
+   cout<<res<<nl;
+    
+    
+}

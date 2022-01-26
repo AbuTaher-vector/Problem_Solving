@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+  
+      ss s;
+      cin>>s;
+      vector<char>v;
+      for(nn i=0;i<s.size();i++)
+      {
+          if(s[i] != '.') v.push_back(s[i]);
+          else break;
+      }
+       for(nn i=0;i<v.size();i++) cout<<v[i];
+        cout<<endl;
+      
+    
+}

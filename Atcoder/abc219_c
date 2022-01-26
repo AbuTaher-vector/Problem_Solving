@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+unordered_map<char, int> mp;
+bool comp(string x, string y)
+{
+ 
+    for (int i = 0;
+         i < min(x.size(), y.size());
+         i++) {
+ 
+        if (mp[x[i]] != mp[y[i]])
+            return mp[x[i]] < mp[y[i]];
+    }
+ 
+    return (x.size() < y.size());
+}
+ 
+void printSorted(vector<string> words,
+                 string order)
+{
+ 
+ 
+    for (int i = 0; i < order.size(); i++)
+        mp[order[i]] = i;
+ 
+    sort(words.begin(), words.end(), comp);
+ 
+    for (auto x : words)
+        cout << x <<"\n";
+}
+ 
+int main()
+{
+ 
+    string order,a;
+    cin>>order;
+    int n;
+    cin>>n;
+    vector<string>words;
+    while(n--)
+    {
+        cin>>a;
+        words.push_back(a);
+    }
+ 
+    printSorted(words, order);
+ 
+    return 0;
+}

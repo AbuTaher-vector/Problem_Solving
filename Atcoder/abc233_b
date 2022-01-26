@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+    nn l,r;
+    ss s;
+    cin>>l>>r>>s;
+    l--;
+    reverse(s.begin()+l,s.begin()+r);
+    cout<<s<<nl; 
+    
+}

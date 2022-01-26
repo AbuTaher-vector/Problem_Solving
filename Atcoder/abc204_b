@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define MOD 1000000007
+int main()
+{
+    nn x;
+    cin>>x;
+    nn sum=0;
+    while(x--)
+    {
+        nn a;
+        cin>>a;
+        if(a>10) sum+=(a-10);
+    }
+    cout<<sum<<"\n";
+ 
+}

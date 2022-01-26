@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{ 
+    ss s;
+    ss a="oxx";
+    nn n=100000;
+    while(n--) s+=a;
+    ss x;
+    cin>>x;
+    nn pos=s.find(x);
+    if(pos>=0) cout<<"Yes"<<nl;
+    else cout<<"No"<<nl;
+   
+}

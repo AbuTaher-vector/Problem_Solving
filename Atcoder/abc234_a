@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+ll fun(ll x)
+{
+    return (x*x)+2*x+3;
+}
+int main()
+{ 
+    ll t;
+    cin>>t;
+    ll a=fun(t);
+    ll b=fun(a);
+     a=a+t;
+    ll w=fun(a);
+    w+=b;
+    cout<<fun(w)<<nl;
+   
+}

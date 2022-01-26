@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+  
+      nn a,b,c,d;
+      cin>>a>>b>>c>>d;
+ 
+       nn k=max(a,b);
+       nn l=min(c,d);
+       cout<<k-l<<endl;
+    
+}

@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+int main()
+{
+    nn n,x,a;
+    cin>>n;
+    set<vector<nn>>st;
+    while(n--)
+    {
+       cin>>x;
+       vector<nn>v;
+       while(x--)
+       {
+          cin>>a;
+          v.push_back(a);
+ 
+       }
+       st.insert(v);
+ 
+ 
+    }
+    cout<<st.size()<<nl;
+   
+}

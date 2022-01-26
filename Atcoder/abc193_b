@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+       nn tt;
+       cin>>tt;
+       nn mn=10000000000,flag=0;
+       while(tt--)
+       {
+           ll a,n,x;
+           cin>>a>>n>>x;
+           if(a<x) {
+                flag=1;
+                if(n<mn) mn=n;
+ 
+           }
+       }
+       if(flag) cout<<mn<<endl;
+       else cout<<-1<<endl;
+ 
+}
+ 
+ 

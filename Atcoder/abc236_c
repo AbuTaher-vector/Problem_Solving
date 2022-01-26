@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+    nn a,b;
+    ss s;
+    cin>>a>>b;
+    vector<ss>x(a),y(b),z(a,"No");
+    map<ss,nn>mp;
+    for(nn i=0;i<a;i++) cin>>x[i];
+        for(nn i=0;i<b;i++) 
+            {
+                cin>>y[i];
+                mp[y[i]]++;
+            }
+            for(nn i=0;i<a;i++)
+            {
+                mp[x[i]]++;
+                if(mp[x[i]]==2) z[i]="Yes";
+            }
+            for(nn i=0;i<z.size();i++) cout<<z[i]<<nl;
+ 
+   
+}

@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+int main()
+{
+    ss a,b,c,d;
+    cin>>a>>b>>c>>d;
+    ss ans="";
+    for(nn i=0;i<d.size();i++)
+    {
+        if(d[i]=='1') ans+=a;
+        if(d[i]=='2') ans+=b;
+        if(d[i]=='3') ans+=c;
+ 
+ 
+    }
+    cout<<ans<<nl;
+   
+}

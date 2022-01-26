@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+int main()
+{
+    ss s;
+    cin>>s;
+    char k;
+    nn ans=0;
+    for(nn i=0;i<s.size();i++)
+    {
+      if(s[i]=='.')
+      {
+          k=s[i+1];
+          break;
+ 
+      }
+      nn a=s[i]-'0';
+      ans*=10;
+      ans+=a;
+ 
+    }
+    if(k>='5') cout<<ans+1<<nl;
+    else cout<<ans<<nl;
+   
+}

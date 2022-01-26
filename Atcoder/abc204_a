@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define MOD 1000000007
+int main()
+{
+    char x,y;
+    cin>>x>>y;
+     ss s="012";
+    if(x==y) cout<<x<<"\n";
+    else
+    {
+        for(nn i=0;i<s.size();i++) 
+        {
+            if(s[i]!=x && s[i]!=y) cout<<s[i]<<"\n";
+        }
+ 
+    }
+ 
+}
