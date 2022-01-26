@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int searchInsert(vector<int>& v, int x) {
+        int lo=0,hi=v.size()-1,mid;
+	while(lo<hi)
+	{
+		mid=(hi+lo)/2;
+		if(v[mid]<x) lo=mid+1;
+		else hi=mid;
+	}
+	if(v[lo]>=x) return lo;
+	return lo+1;
+        
+    }
+};
