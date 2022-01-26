@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+        nn t;
+        cin>>t;
+        nn arr[t+1];
+        for(nn i=0;i<t;i++) cin>>arr[i];
+        nn cnt=0,sum,mul;
+        for(nn i=0;i<t;i++)
+        {
+              sum=0,mul=1;
+            for(nn j=i;j<t;j++)
+            {
+                sum+=arr[j],mul*=arr[j];
+                if(sum==mul) cnt++;
+            }
+        }
+        cout<<cnt<<endl;
+    }
+
+
+
+}
+© 2022 GitH

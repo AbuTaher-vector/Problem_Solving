@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--)
+    {
+        string s1,s2;
+	    cin>>s1>>s2;
+	    int n=(int)s1.length();
+	    bool ok = true;
+	    for(int i=0;i<n;++i){
+	    if(s1[i]!='?' && s2[i]!='?' && s1[i]!=s2[i]){
+	        ok = false;
+	     }
+	   }
+	  if(ok){
+	      puts("Yes");
+	   }
+	   else{
+	      puts("No");
+	   }
+    }
+
+}

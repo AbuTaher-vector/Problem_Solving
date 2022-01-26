@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+      nn n,m,k,cnt=0;
+      cin>>n>>m>>k;
+      while(n--)
+      {
+          nn arr[k+1],q,sum=0;
+          for(nn i=0;i<k;i++)
+          {
+              cin>>arr[i];
+              sum+=arr[i];
+          }
+          cin>>q;
+          if(q<=10 && sum>=m) cnt++;
+      }
+      cout<<cnt<<endl;
+
+
+
+
+}

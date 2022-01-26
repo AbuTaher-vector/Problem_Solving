@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define sss string
+int main()
+{
+      nn tt;
+      cin>>tt;
+      while(tt--)
+      {
+          nn n,m,k;
+          cin>>n>>m>>k;
+          nn mx=max(n,m);
+          nn mn=min(n,m);
+          if(mn+k>=mx) cout<<0<<endl;
+          else cout<<mx-(mn+k)<<endl;
+      }
+
+}

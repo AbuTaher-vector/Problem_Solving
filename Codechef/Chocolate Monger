@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+void code()
+{
+	nn x,n;
+	cin>>x>>n;
+	nn k=x-n;
+	set<nn>s;
+	while(x--)
+	{
+		nn t;
+		cin>>t;
+		s.insert(t);
+
+	}
+	if(k<s.size()) cout<<k<<"\n";
+	else cout<<s.size()<<"\n";
+
+
+
+
+
+
+	
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+  
+}

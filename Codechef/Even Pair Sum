@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+     ll tt,a,b,even1=0,odd1=0,even2=0,odd2=0;
+     cin>>tt;
+     while(tt--)
+     {
+          cin>>a>>b;
+          even1=a/2;
+          odd1=a-even1;
+        even2=b/2;
+         odd2=b-even2;
+         cout<<(even1*even2)+(odd1*odd2)<<endl;
+
+     }
+
+
+
+}
+

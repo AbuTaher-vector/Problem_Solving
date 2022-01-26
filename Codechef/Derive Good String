@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+     ss s;
+      cin>>s;
+     set<char>st(s.begin(),s.end());
+     cout<<s.size()-st.size()<<nl;
+
+}
+int main()
+{
+   nn tt;
+   cin>>tt;
+   while(tt--) code(); 
+
+}

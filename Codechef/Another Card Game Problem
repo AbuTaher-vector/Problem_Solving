@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+void code()
+{
+	nn a,b;
+	nn cnt=0,cntt=0;
+	cin>>a>>b;
+	cnt=a/9;
+	a%=9;
+	if(a>0) cnt++;
+	cntt=b/9;
+	b%=9;
+	if(b>0) cntt++;
+	if(cntt<cnt || cnt==cntt) cout<<1<<" "<<cntt<<"\n";
+	else cout<<0<<" "<<cnt<<"\n";
+
+	
+
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+  
+}

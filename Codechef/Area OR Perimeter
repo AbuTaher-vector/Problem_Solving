@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+   nn l,b,a,p;
+   cin>>l>>b;
+   a=l*b;
+   p=2*(l+b);
+   if(a>p) cout<<"Area"<<endl<<a<<endl;
+   else if(p>a) cout<<"Peri"<<endl<<p<<endl;
+   else cout<<"Eq"<<endl<<a<<endl;
+
+
+
+}

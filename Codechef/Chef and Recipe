@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int code()
+{
+     nn n;
+     cin>>n;
+     nn arr[n+1];
+     map<nn,nn>mp;
+     vector<pair<nn,nn>>v;
+     for(nn i=0;i<n;i++)
+     {
+          cin>>arr[i];
+          mp[arr[i]]++;
+          v.push_back(make_pair(arr[i],i+1));
+     }
+     set<nn>s;
+     for(auto x:mp) s.insert(x.second);
+          if(mp.size()!=s.size())
+          {
+               cout<<"NO"<<nl;
+               return 0;
+          }
+          sort(v.begin(),v.end());
+          for(nn i=0;i<v.size()-1;i++) 
+          {
+               if(v[i].first-v[i+1].first==0 && v[i+1].second-v[i].second>1)
+               {
+                    cout<<"NO"<<nl;
+                    return 0;
+               }
+          }
+          cout<<"YES"<<nl;
+          return 0;
+}
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--) code();     
+}

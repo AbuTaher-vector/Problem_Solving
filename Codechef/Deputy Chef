@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+     nn n;
+     cin>>n;
+     vector<nn>a,b;
+     nn k=n,x,mx=INT_MIN;
+     while(n--)
+     {
+          cin>>x;
+          a.push_back(x);
+     }
+     while(k--)
+     {
+          cin>>x;
+          b.push_back(x);
+     }
+     a.insert(a.begin(),a[a.size()-1]);
+     a.push_back(a[1]);
+      b.insert(b.begin(),b[b.size()-1]);
+     b.push_back(b[1]);
+     for(nn i=1;i<a.size()-1;i++)
+     {
+          if(b[i]>a[i-1]+a[i+1])
+          {
+              mx=max(mx,b[i]);
+          }
+     }
+     if(mx>0) cout<<mx<<nl;
+     else cout<<-1<<nl;
+}
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}

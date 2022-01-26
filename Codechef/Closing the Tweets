@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+          nn n,k ,count=0;
+          cin>>n>>k;
+          int arr[n+1]={0};
+          while(k--)
+          {
+              ss s;
+              int x;
+              cin>>s;
+              if(s=="CLICK")
+              {
+                  cin>>x;
+                  if(arr[x-1]==0)
+                  {
+                      arr[x-1]++;
+                      count++;
+                  }
+                  else
+                  {
+                      arr[x-1]--;
+                      count--;
+                  }
+              }
+
+              else{
+                count=0;
+                fill(arr,arr+n,0);
+              }
+              cout<<count<<endl;
+
+          }
+}

@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int code()
+{
+	nn n;
+	cin>>n;
+	ss arr[n+1];
+	nn cnt,cntt;
+	for(nn i=0;i<n;i++) cin>>arr[i];
+		for(nn i=0;i<n;i++)
+		{
+		    cnt=0,cntt=0;
+			ss s=arr[i];
+			for(nn j=0;j<s.size();j++)
+			{
+				if(s[j]>='a' && s[j]<='m') cnt++;
+				 if(s[j]>='N' && s[j]<='Z') cntt++;
+				 if(s[j]<'N' || s[j]>'m' )
+				 {
+				 	cout<<"NO\n";
+				 	return 0;
+				 }
+
+				 if(cnt && cntt){
+				 	cout<<"NO\n";
+				 	return 0;
+				 }
+
+			}
+			if(cnt==0 && cntt==0)
+			{
+				cout<<"NO\n";
+				return 0;
+			}
+		}
+		cout<<"YES\n";
+		return 0;
+	
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+}

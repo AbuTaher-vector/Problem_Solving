@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+         nn x,flag=0;
+         cin>>x;
+         nn arr[x+1];
+         for(nn i=0;i<x;i++) cin>>arr[i];
+         sort(arr,arr+x);
+         for(nn i=0;i<x-1;i++)
+         {
+            if(arr[i]==arr[i+1])
+            {
+                flag=1;
+                break;
+            }
+         }
+         if(flag==0) cout<<"prekrasnyy"<<endl;
+         else cout<<"ne krasivo"<<endl;
+     }
+
+
+
+}

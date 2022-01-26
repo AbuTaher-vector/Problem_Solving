@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+void code()
+{
+	ll n,r;
+	cin>>n>>r;
+	ll ar[n+1],arr[n+1];
+	vector<ll>v;
+	for(nn i=0;i<n;i++) cin>>ar[i];
+		for(nn i=0;i<n;i++) cin>>arr[i];
+     
+     ll sum=arr[0];
+    v.push_back(sum);
+    for(nn i=1;i<n;i++)
+    {
+    	ll k=abs(ar[i]-ar[i-1]);
+    	k*=r;
+    	sum-=k;
+    	if(sum<0) sum=0;
+    	sum+=arr[i];
+    	v.push_back(sum);
+
+    }
+    sort(v.begin(),v.end());
+    reverse(v.begin(),v.end());
+    cout<<v[0]<<"\n";
+
+
+
+
+
+
+	
+}
+int main()
+{
+	nn tt;
+	cin>>tt;
+	while(tt--) code();
+  
+}

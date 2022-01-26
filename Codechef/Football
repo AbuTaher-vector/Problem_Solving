@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+    nn n;
+    cin>>n;
+    nn A[n+1],B[n+1];
+    nn mx=INT_MIN,x,y,r;
+    for(nn i=0;i<n;i++) cin>>A[i];
+      for(nn i=0;i<n;i++) cin>>B[i];
+           for(nn i=0;i<n;i++){
+                  x=A[i]*20,y=B[i]*10;
+                  r=x-y;
+                  if(r<0) r=0;
+                  mx=max(mx,r);      
+           }
+           cout<<mx<<nl;
+ 
+
+}
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}

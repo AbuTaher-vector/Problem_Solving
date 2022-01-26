@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl "\n"
+void code()
+{
+     vector<pair<nn,ss>>v;
+     ss x,s;
+     nn n,m;
+     cin>>n>>m;
+     while(n--)
+     {
+      nn one=0;
+       cin>>s;
+       for(nn i=0;i<s.size();i++) if(s[i]=='1') one++;
+       
+       v.push_back(make_pair(one,s));
+
+     }
+     ll cnt=0,ans=0;
+     sort(v.begin(),v.end());
+     for(nn i=0;i<v.size();i++) 
+          {
+               ss x=v[i].second;
+             for(nn j=0;j<m;j++)
+             {
+               if(x[j]=='1') cnt++;
+               else ans+=cnt;
+             }  
+
+          }
+          
+          cout<<ans<<nl;
+         
+
+          
+     
+}
+int main()
+{
+  nn tt;
+  cin>>tt;
+  while(tt--) code();
+     
+    
+}

@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+
+   nn tt;
+   cin>>tt;
+   while(tt--)
+   {
+       nn x;
+       cin>>x;
+       nn arr[x+1];
+       for(nn i=0;i<x;i++) cin>>arr[i];
+       sort(arr,arr+x);
+        if(x==1) cout<<arr[0]<<endl;
+        else if(x==2) cout<<arr[1]<<endl;
+        else if(x==3)
+        {
+           if(arr[0]+arr[1]<=arr[2]) cout<<arr[2]<<endl;
+           else cout<<arr[0]+arr[1]<<endl;
+        }
+        else if(x==4)
+        {
+            if(arr[0]+arr[1]+arr[2]<=arr[3]) cout<<arr[3]<<endl;
+            else{
+             nn sum=arr[2];
+             nn k=arr[3]-arr[2];
+             sum+=min(arr[1],k);
+             k=abs(arr[1]-k);
+             sum+=max(arr[0],k);
+
+              cout<<sum<<endl;
+
+            }
+
+        }
+   }
+
+
+}

@@ -1,0 +1,54 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+int main()
+{
+     nn tt;
+     cin>>tt;
+     while(tt--)
+     {
+         nn n,k;
+         cin>>n>>k;
+         vector<ss>v;
+         vector<ss>v2;
+         while(n--)
+         {
+             ss s;
+             cin>>s;
+             v.push_back(s);
+         }
+         while(k--)
+         {
+             nn l;
+             cin>>l;
+             while(l--)
+             {
+                 ss s2;
+                 cin>>s2;
+                 v2.push_back(s2);
+             }
+         }
+         nn flag=0;
+         for(nn i=0;i<v.size();i++)
+         {
+             flag=0;
+             for(nn j=0;j<v2.size();j++)
+             {
+                 if(v[i]==v2[j])
+                 {
+                     cout<<"YES"<<" ";
+                     flag=1;
+                     break;
+                 }
+             }
+             if(flag==0) cout<<"NO"<<" ";
+         }
+         cout<<endl;
+
+     }
+
+
+}
