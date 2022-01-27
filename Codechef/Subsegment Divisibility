@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+vector<nn>v(520);
+void code()
+{
+    nn n;
+    cin>>n;
+    for(nn i=0;i<n;i++) cout<<v[i]<<" ";
+        cout<<nl;
+}
+int main()
+{
+    v[0]=3,v[1]=2;
+    for(nn i=2;i<=520;i++) v[i]=2+v[i-2];
+   nn tt;
+   cin>>tt;
+   while(tt--) code();
+   
+}
