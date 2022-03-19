@@ -1,0 +1,10 @@
+class Solution {
+public:
+    int missingNumber(vector<int>& v) {
+        int xr=0;
+       for(int i=0;i<=v.size();i++) xr^=i;
+        for(int i=0;i<v.size();i++) xr^=v[i];
+            return xr;
+        
+    }
+};
