@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int findComplement(int n) {
+        int sum=0,cnt=0;
+        while(n)
+        {
+            if((n&1)==0) sum+=pow(2,cnt);
+            n>>=1;
+            cnt++;
+        }
+        return sum;
+    }
+};
