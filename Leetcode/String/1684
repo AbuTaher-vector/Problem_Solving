@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int countConsistentStrings(string s, vector<string>& v) {
+        int cnt=0;
+     for(int i=0;i<v.size();i++)
+     {
+          string x=v[i];
+          int flag=1;
+          for(int j=0;j<x.size();j++)
+          {
+            int pos=s.find(x[j]);
+            if(pos<0)
+            {
+                flag=0;break;
+            }
+
+          }
+          if(flag) cnt++;
+     }
+     return cnt;
+
+        
+    }
+};
