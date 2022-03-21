@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool hasAlternatingBits(int n) {
+        int prev=(n&1);
+    while(n)
+    {
+        if(((n>>1)&1)==prev)
+        {
+            return false;
+        }
+        n>>=1;
+        prev=(n&1);
+
+    }
+  return true;
+        
+    }
+};
