@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int 
+#define ss string
+#define nl "\n"
+int main()
+{ 
+   
+
+   ll a,b,c,k;
+   cin>>a>>b>>c>>k;
+   if(a>=k) cout<<k<<nl;
+   else 
+   {
+       nn s=a;
+        while(a!=0)
+        {
+             nn carry=(~k)&a;
+             k=k^a;
+             a=carry<<1;
+        }
+        if(b>=k) cout<<s<<nl;
+        else
+        {
+            while(b!=0)
+            {
+             nn carry=(~k)&b;
+             k=k^b;
+             b=carry<<1;
+            }
+            cout<<s-k<<nl;
+
+        }
+   }
+}
