@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int 
+#define ss string
+#define nl "\n"
+int main()
+{ 
+   
+
+  ll n;
+  cin>>n;
+          nn cnt=0;
+          while(n)
+          {
+              if((n^1)) cnt++;
+              n>>=1;
+
+          }
+          cout<<cnt<<nl;
+}
