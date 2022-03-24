@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+void Sort(int ara[],int n)
+{
+    int i,j,temp;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n-i-1;j++)
+        {
+            if(ara[j]>ara[j+1])
+            {
+                temp=ara[j];
+                ara[j]=ara[j+1];
+                ara[j+1]=temp;
+            }
+        }
+    }
+}
+
+int main()
+{
+    string s;
+    int ara[100],i,j=0;
+    cin>>s;
+    for( i=0;i<s.size();i=i+2)
+    {
+        ara[j++]=s[i]-48;
+    }
+    Sort(ara,j);
+
+    for( i=0;i<j;i++)
+    {
+        cout<<ara[i];
+        if(i==j-1)
+        {
+            break;
+        }
+        cout<<"+";
+    }
+    cout<<endl;
+}
