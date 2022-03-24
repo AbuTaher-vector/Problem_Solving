@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    char ch[101];
+    int i,upper=0,lower=0;
+    cin>>ch;
+    for(i=0;i<strlen(ch);i++)
+    {
+        if(ch[i]>=65 && ch[i]<=90) upper++;
+        else if(ch[i]>=97 && ch[i]<=122) lower++;
+    }
+    for(i=0;i<strlen(ch);i++)
+    {
+       if(upper>lower)
+       {
+           if(ch[i]>=97 && ch[i]<=122)
+           {
+               ch[i]-=32;
+               cout<<ch[i];
+           }
+           else cout<<ch[i];
+       }
+     else
+       {
+           if(ch[i]>=65 && ch[i]<=90)
+           {
+               ch[i]+=32;
+               cout<<ch[i];
+           }
+           else cout<<ch[i];
+       }
+    }
+    cout<<endl;
+
+
+}
