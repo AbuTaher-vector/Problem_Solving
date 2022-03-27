@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+    /*https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/lets-shift-2-36d90caa/
+    */
+     nn n,m;
+     char a;
+     cin>>n>>m>>a;
+     if(a=='L')
+     {
+       
+        nn b=(n<<m);
+        nn c=(n>>(16-m));
+        nn k=(pow(2,16));
+        b=b & (k-1);
+        cout<<(c|b)<<nl;
+     }
+     else
+     {
+        nn b=(n>>m);
+        nn c=(n<<(16-m));
+        nn k=(pow(2,16));
+        c=c & (k-1);
+        cout<<(c|b)<<nl;
+
+     }
+
+}
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--) code();
+
+}
