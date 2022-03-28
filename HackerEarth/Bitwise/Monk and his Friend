@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+    /*
+    https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/monk-and-his-friend/*/
+   ll a,b;
+   cin>>a>>b;
+   cout<<__builtin_popcountll((a^b))<<nl;
+
+}
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--) code();
+
+}
