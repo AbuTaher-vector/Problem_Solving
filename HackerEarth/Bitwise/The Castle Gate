@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+    /*
+    link : https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/the-castle-gate-july-easy/
+    */
+    nn n,cnt=0;
+    cin>>n;
+    for(nn i=1;i<=n-1;i++)
+    {
+         for(nn j=i+1;j<=n;j++)
+         {
+
+            if((i^j)<=n) cnt++;
+
+         }
+    }
+    cout<<cnt<<nl;
+    
+
+}
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--) code();
+
+}
