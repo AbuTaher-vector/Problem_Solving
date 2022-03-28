@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+    /*
+   https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/equal-elements-2-db70c1ae/
+   */
+   nn n,x,odd=0,even=0;
+   cin>>n;
+   for(nn i=0;i<n;i++)
+   {
+       cin>>x;
+       if(x&1) odd++;
+       else even++;
+   }
+   if((odd^n)==0 || (even^n)==0) cout<<0<<nl;
+   else cout<<min(even,odd)<<nl;
+
+}
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--) code();
+
+}
