@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+    /*
+   https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/monks-choice-of-numbers-1/
+   */
+  nn n,k,x,ans=0;
+  vector<nn>v;
+  cin>>n>>k;
+  for(nn i=0;i<n;i++)
+  {
+    cin>>x;
+    v.push_back(__builtin_popcount(x));
+  }
+  sort(v.begin(),v.end());
+  reverse(v.begin(),v.end());
+  for(nn i=0;i<k;i++) ans+=v[i];
+    cout<<ans<<nl;
+
+
+}
+int main()
+{
+    nn tt;
+    cin>>tt;
+    while(tt--) code();
+
+}
