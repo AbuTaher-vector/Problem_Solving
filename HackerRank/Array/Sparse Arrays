@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+int main()
+{
+    /* #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif*/
+
+    nn n,q;
+    ss x;
+    cin>>n;
+    map<ss,nn>mp;
+    while(n--)
+    {
+     cin>>x;
+     mp[x]++;
+    }
+    cin>>q;
+     while(q--)
+     {
+          cin>>x;
+          nn cnt=0;
+          for(auto a:mp) if(a.first==x) cnt+=a.second;
+
+               cout<<cnt<<nl;
+     }
+    
+
+}
