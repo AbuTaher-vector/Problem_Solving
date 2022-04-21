@@ -1,0 +1,11 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& v) {
+        
+        set<int>s;
+     for(auto x:v) s.insert(x);
+          if(s.size()==v.size()) return false;
+     else return true;
+        
+    }
+};
