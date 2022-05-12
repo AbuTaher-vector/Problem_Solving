@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void setup()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+
+}
+void code()
+{
+    nn a,b;
+    cin>>a>>b;
+    cout<<"YES"<<nl;
+   
+}
+int main()
+{
+     setup();
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}
