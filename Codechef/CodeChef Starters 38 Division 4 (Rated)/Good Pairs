@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void setup()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+
+}
+void code()
+{
+   nn n;
+   cin>>n;
+   vector<nn>a(n),b(n);
+   map<pair<nn,nn>,nn>mp;
+   for(nn i=0;i<n;i++)  cin>>a[i];
+    for(nn i=0;i<n;i++) cin>>b[i];
+         ll cnt=0;
+         for(nn i=0;i<n;i++) 
+        {
+            cnt+=mp[{a[i],b[i]}];
+            mp[{b[i],a[i]}]++;
+        }
+        cout<<cnt<<nl;
+}
+int main()
+{
+     setup();
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}
