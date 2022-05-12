@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void setup()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+
+}
+void code()
+{
+   ll a,b,c;
+   cin>>a>>b>>c;
+    nn flag=0;
+    if(a>b+c) flag++;
+    if(b>a+c) flag++;
+    if(c>a+b) flag++;
+    if(flag) cout<<"YES"<<nl;
+    else cout<<"NO"<<nl;
+}
+int main()
+{
+     setup();
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}
