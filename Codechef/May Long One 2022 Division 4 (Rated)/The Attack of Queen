@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+    ll n,x,y;
+    cin>>n>>x>>y;
+    ll ans=(n-1)*2;
+    ans+=min(x-1,n-y);
+    ans+=min(n-x,n-y);
+    ans+=min(n-x,y-1);
+    ans+=min(x-1,y-1);
+    cout<<ans<<nl;
+
+   
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}
