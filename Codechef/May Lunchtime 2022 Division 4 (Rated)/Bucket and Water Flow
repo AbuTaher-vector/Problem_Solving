@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void setup()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+
+}
+void code()
+{
+    nn w,x,y,z;
+   cin>>w>>x>>y>>z;
+   if(y*z>x-w) cout<<"overFlow"<<nl;
+   else if(y*z==x-w) cout<<"filled"<<nl;
+   else cout<<"Unfilled"<<nl;
+
+}
+int main()
+{
+        setup();
+        nn tt;
+        cin>>tt;
+        while(tt--) code();
+}
