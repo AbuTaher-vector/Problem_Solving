@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void setup()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+
+}
+void code()
+{
+     nn n;
+     ss s;
+     cin>>n>>s;
+     nn cnt=0;
+     for(nn i=0;i<n;i++)
+     {
+         if(s[i]=='c' || s[i]=='g' || s[i]=='l' || s[i]=='r' ) cnt++;
+     }
+     ll x=1;
+     while(cnt--) 
+      {
+         x=(x*2)%1000000007;
+      }
+     cout<<x<<nl;
+    
+}
+int main()
+{
+   setup();
+   nn tt;
+   cin>>tt;
+   while(tt--) code();
+
+   
+}
