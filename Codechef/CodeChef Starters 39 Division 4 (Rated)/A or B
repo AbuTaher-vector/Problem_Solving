@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void setup()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+
+}
+void code()
+{
+   nn x,y;
+   cin>>x>>y;
+   ll a=(500-(x*2))+(1000-(4*(x+y)));
+   ll b=(1000-(y*4))+(500-(2*(x+y)));
+   cout<<max(a,b)<<nl;
+    
+}
+int main()
+{
+   setup();
+   nn tt;
+   cin>>tt;
+   while(tt--) code();
+
+   
+}
