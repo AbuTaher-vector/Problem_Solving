@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+   nn n,x;
+   cin>>n>>x;
+   if(n%2==0) cout<<"YES"<<nl;
+   else if(n%2)
+   {
+       if(x%2==0) cout<<"NO"<<nl;
+       else cout<<"YES"<<nl;
+
+   }
+
+}
+int main()
+{
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}
