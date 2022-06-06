@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define nn int
+#define dd double
+#define ll long long int
+#define ss string
+#define nl '\n'
+void code()
+{
+    ll n;
+    cin>>n;
+    if(n==2) cout<<0<<nl;
+    else
+    {
+
+         if(n%2)
+      {
+        ll a=n/2;
+        ll b=a+1;
+        ll lcm=(a*b)/__gcd(a,b);
+        cout<<lcm-(__gcd(a,b))<<nl;
+       }
+    else
+    {
+        ll a=n/2;
+        ll b=a;
+        if(a%2) 
+         {
+            a-=2,b+=2;
+            ll lcm=(a*b)/__gcd(a,b);
+           cout<<lcm-(__gcd(a,b))<<nl;
+
+
+         }
+         else
+         {
+            a-=1,b+=1;
+            ll lcm=(a*b)/__gcd(a,b);
+           cout<<lcm-(__gcd(a,b))<<nl;
+
+
+         }
+
+    }
+
+    }
+    
+
+}
+int main()
+{
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("outputt.txt", "w", stdout);
+     #endif
+     nn tt;
+     cin>>tt;
+     while(tt--) code();
+}
