@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<int> intersection(vector<int>&a, vector<int>&b) {
+        
+        set<int>x,y;
+     for(int i=0;i<a.size();i++) x.insert(a[i]);
+      for(int i=0;i<b.size();i++) y.insert(b[i]);
+      vector<int>c(x.begin(),x.end());
+      vector<int>d(y.begin(),y.end());
+      vector<int>ans;
+      for(int i=0;i<c.size();i++)
+      {
+          for(int j=0;j<d.size();j++)
+          {
+            if(c[i]==d[j])
+            {
+               ans.push_back(c[i]);
+               break;
+            }
+          }
+      }
+        return ans;
+        
+    }
+};
