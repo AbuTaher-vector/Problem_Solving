@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+void setup()
+{
+    ios_base::sync_with_stdio(0); cin.tie(0);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("output.txt", "w", stdout);
+     #endif
+} 
+const int N=1e6;
+vector<int>g[N],vis(N),color(N);
+bool ok=true;
+void dfs(int x)
+{
+    vis[x]++;
+    for(auto t:g[x])
+    {
+        if(!vis[t])
+        {
+            color[t]=color[x]^1;
+            dfs(t);
+        }
+        else
+        {
+            if(color[t]==color[x])
+            {
+                ok=false;
+            }
+        }
+    }
+}
+int main()
+{
+       setup();
+
+       int n,m;
+       cin>>n>>m;
+       int x,y;
+       while(m--)
+       {
+          cin>>x>>y;
+          g[x].push_back(y);
+          g[y].push_back(x);
+       }
+       for(int i=1;i<=n;i++)
+       {
+           if(!vis[i]) dfs(i);
+       }
+       if(!ok) cout<<"IMPOSSIBLE"<<'\n';
+       else 
+       {
+          for(int i=1;i<=n;i++) cout<<color[i]+1<<" ";
+            cout<<'\n';
+       }
+}
