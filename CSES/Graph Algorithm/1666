@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+void setup()
+{
+    ios_base::sync_with_stdio(0); cin.tie(0);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("output.txt", "w", stdout);
+     #endif
+} 
+const int N=1e6;
+vector<int>g[N],vis(N);
+void dfs(int x)
+{
+      vis[x]++;
+      for(auto t:g[x]) if(!vis[t]) dfs(t);
+}
+int main()
+{
+       setup();
+
+       int n,m;
+       cin>>n>>m;
+       int x,y;
+       while(m--)
+       {
+          cin>>x>>y;
+          g[x].push_back(y);
+          g[y].push_back(x);
+       }
+       vector<pair<int,int>>v;
+       dfs(1);
+       for(int i=2;i<=n;i++)
+       {
+          if(!vis[i])
+          {
+             v.push_back({i-1,i});
+             dfs(i);
+          }
+       }
+       cout<<v.size()<<'\n';
+       for(auto x:v) cout<<x.first<<" "<<x.second<<'\n';
+}
