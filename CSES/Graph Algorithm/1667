@@ -1,0 +1,69 @@
+#include<bits/stdc++.h>
+using namespace std;
+void setup()
+{
+    ios_base::sync_with_stdio(0); cin.tie(0);
+     #ifndef ONLINE_JUDGE
+     freopen("input.txt", "r", stdin);
+     freopen("output.txt", "w", stdout);
+     #endif
+} 
+const int N=1e6;
+vector<int>g[N],vis(N),parent(N),viss(N);
+void dfs(int x)
+{
+      vis[x]++;
+      for(auto t:g[x]) if(!vis[t]) dfs(t);
+}
+int main()
+{
+       setup();
+
+       int n,m;
+       cin>>n>>m;
+       int x,y;
+       while(m--)
+       {
+          cin>>x>>y;
+          g[x].push_back(y);
+          g[y].push_back(x);
+       }
+       dfs(1);
+       if(!vis[n]) cout<<"IMPOSSIBLE\n";
+       else
+       {
+        queue<int>q;
+        q.push(1);
+        viss[1]++;
+        while(!q.empty())
+        {
+            int t=q.front();
+            q.pop();
+            for(auto x:g[t])
+            {
+                if(!viss[x])
+                {
+                    parent[x]=t;
+                    viss[x]++;
+                    q.push(x);
+                }
+            }
+        }
+
+        vector<int>ans;
+        ans.push_back(n);
+        int k=n;
+        while(1)
+        {
+            if(k==1) break;
+
+            ans.push_back(parent[k]);
+            k=parent[k];
+        }
+        reverse(ans.begin(),ans.end());
+        cout<<ans.size()<<'\n';
+        for(auto x:ans) cout<<x<<" ";
+            cout<<'\n';
+
+       }
+}
