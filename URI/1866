@@ -1,0 +1,18 @@
+#include <iostream>
+ 
+using namespace std;
+ void code()
+ {
+     int x;
+     cin>>x;
+     if(x&1) cout<<1<<'\n';
+     else cout<<0<<'\n';
+ }
+int main() {
+    
+    int tt;
+    cin>>tt;
+    while(tt--) code();
+ 
+    return 0;
+}
