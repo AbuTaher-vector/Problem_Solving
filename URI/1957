@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    vector<char>v;
+    int t;
+    cin>>t;
+    while(t)
+    {
+        int k=t%16;
+        if(k==10) v.push_back('A');
+        if(k==11) v.push_back('B');
+        if(k==12) v.push_back('C');
+        if(k==13) v.push_back('D');
+        if(k==14) v.push_back('E');
+        if(k==15) v.push_back('F');
+        
+        if(k<10) v.push_back(k+'0');
+        t/=16;
+        
+    }
+    reverse(v.begin(),v.end());
+    for(auto x:v) cout<<x;
+    cout<<'\n';
+}
