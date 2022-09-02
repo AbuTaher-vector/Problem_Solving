@@ -1,0 +1,25 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+   int a,b,c,cnt=0,inter=0,gra=0,draw=0;
+   while(1)
+   {
+       cin>>a>>b>>c;
+       cout<<"Novo grenal (1-sim 2-nao)\n";
+       if(a==b) draw++;
+       else if(a<b) gra++;
+       else inter++;
+       cnt++;
+       if(c==2) break;
+       
+   }
+   cout<<cnt<<" grenais\n"<<"Inter:"<<inter<<'\n'<<"Gremio:"<<gra<<'\n';
+   cout<<"Empates:"<<draw<<'\n';
+   if(inter>gra) cout<<"Inter venceu mais\n";
+   else if(gra>inter) cout<<"Gremio venceu mais\n";
+   else cout<<"Não houve vencedor\n";
+    return 0;
+}
