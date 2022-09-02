@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+ 
+  double x;
+  int y=6,cnt=0;
+  while(y--)
+   {
+       cin>>x;
+       if(x>0) cnt++;
+  }
+  cout<<cnt<<" valores positivos\n";
+ 
+    return 0;
+}
