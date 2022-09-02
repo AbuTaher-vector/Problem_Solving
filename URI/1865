@@ -1,0 +1,19 @@
+#include <iostream>
+ 
+using namespace std;
+ void code()
+ {
+     int n;
+     string s;
+     cin>>s>>n;
+     if(s=="Thor") cout<<"Y\n";
+     else cout<<"N\n";
+ }
+int main() {
+ 
+   int tt;
+   cin>>tt;
+   while(tt--) code();
+ 
+    return 0;
+}
