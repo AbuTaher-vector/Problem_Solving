@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+ 
+     vector<int>v;
+    int x;
+    while(1)
+    {
+        cin>>x;
+        if(x<0) break;
+        v.push_back(x);
+    }
+    int k=v.size();
+    int sum=0;
+    for(auto x:v) sum+=x;
+    printf("%.2lf\n",sum/(k*1.0));
+       
+    return 0;
+}
