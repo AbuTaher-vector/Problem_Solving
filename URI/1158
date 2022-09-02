@@ -1,0 +1,23 @@
+#include <iostream>
+ 
+using namespace std;
+ void code()
+ {
+     int x,y,ans=0;
+     cin>>x>>y;
+     if(x%2==0) x++;
+     while(y--)
+     {
+         ans+=x;
+         x+=2;
+     }
+     cout<<ans<<'\n';
+ }
+int main() {
+ 
+    int tt;
+    cin>>tt;
+    while(tt--) code();
+ 
+    return 0;
+}
