@@ -1,0 +1,11 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ double a;
+ cin>>a;
+ printf("VOLUME = %.3lf\n",(a*a*a*3.14159*4)/3);
+ 
+    return 0;
+}
