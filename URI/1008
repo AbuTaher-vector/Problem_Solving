@@ -1,0 +1,14 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    int a;
+    double b,c;
+    cin>>a>>b>>c;
+    cout<<"NUMBER = "<<a<<'\n';
+    printf("SALARY = U$ %.2lf\n",b*c);
+ 
+    return 0;
+}
