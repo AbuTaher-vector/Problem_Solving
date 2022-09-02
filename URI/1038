@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+     double ans;
+     int x,y;
+     map<int,double>mp;
+     mp[1]=4.00;
+     mp[2]=4.50;
+     mp[3]=5.00;
+     mp[4]=2.00;
+     mp[5]=1.50;
+     cin>>x>>y;
+     printf("Total: R$ %.2lf\n",mp[x]*y);
+     
+ 
+    return 0;
+}
