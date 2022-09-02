@@ -1,0 +1,28 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+void code()
+{
+    double a,b,c;
+    cin>>a>>b>>c;
+    a*=2;
+    b*=3;
+    c*=5;
+    double k=(a+b+c)/10;
+    k*=1000;
+    int t=k;
+    if(t%10>=5) t+=10;
+    t/=10;
+    k=t/100.0;
+    printf("%.1lf\n",k);
+
+}
+int main()
+{
+       
+     int n;
+     cin>>n;
+     while(n--) code();
+    
+}
