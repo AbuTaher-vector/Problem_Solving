@@ -1,0 +1,18 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+void code() {
+ 
+    double a,b;
+    cin>>a>>b;
+    if(b==0) cout<<"divisao impossivel\n";
+    else printf("%.1lf\n",a/b);
+ 
+}
+int main()
+{
+    int tt;
+    cin>>tt;
+    while(tt--) code();
+}
