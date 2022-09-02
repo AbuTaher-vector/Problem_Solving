@@ -1,0 +1,17 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    double a,b;
+    cin>>a>>b;
+    a/=b;
+    int k=a*10000;
+    if(k%10>=5) k+=10;
+    k/=10;
+    double ans=k/1000.0;
+    cout<<ans<<" km/l\n";
+ 
+    return 0;
+}
