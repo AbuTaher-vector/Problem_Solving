@@ -1,0 +1,26 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    int t;
+    cin>>t;
+    double sum=0;
+    int x,y;
+    while(t--)
+    {
+        cin>>x>>y;
+        double a;
+        if(x==1001) a=1.50;
+        else if(x==1002) a=2.50;
+        else if(x==1003) a=3.50;
+        else if(x==1004) a=4.50;
+        else a=5.50;
+        
+        sum+=a*y;
+        
+    }
+    printf("%.2lf\n",sum);
+    return 0;
+}
