@@ -1,0 +1,17 @@
+#include <iostream>
+ 
+using namespace std;
+ void code()
+ {
+     int x,y,sum=0;
+     cin>>x>>y;
+     for(int i=min(x,y)+1;i<max(x,y);i++) if(i&1) sum+=i;
+     cout<<sum<<'\n';
+ }
+int main() {
+ 
+   int tt;
+   cin>>tt;
+   while(tt--) code();
+    return 0;
+}
