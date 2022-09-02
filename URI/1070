@@ -1,0 +1,13 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+   int x;
+   cin>>x;
+   if(x%2==0) x++;
+   cout<<x<<"\n"<<x+2<<"\n"<<x+4<<'\n'<<x+6<<'\n'<<x+8<<'\n'<<x+10<<'\n';
+ 
+    return 0;
+}
