@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    map<int,int>mp;
+    int t,a=5,x;
+    cin>>t;
+    while(a--)
+    {
+        cin>>x;
+        mp[x]++;
+    }
+    cout<<mp[t]<<'\n';
+    
+}
