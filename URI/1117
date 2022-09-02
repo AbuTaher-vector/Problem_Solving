@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+    double x;
+    vector<double>v;
+    while(1)
+    {
+        cin>>x;
+        if(x<0 || x>10) cout<<"nota invalida\n";
+        else v.push_back(x);
+        
+        if(v.size()==2)
+        {
+            printf("media = %.2lf\n",(v[0]+v[1])/2);
+            break;
+            
+        }
+    }
+    return 0;
+}
