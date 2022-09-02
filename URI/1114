@@ -1,0 +1,19 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+    int t;
+    while(1)
+    {
+       cin>>t;
+       if(t==2002)
+       {
+           cout<<"Acesso Permitido\n";
+           break;
+       }
+       cout<<"Senha Invalida\n";
+    }
+ 
+    return 0;
+}
