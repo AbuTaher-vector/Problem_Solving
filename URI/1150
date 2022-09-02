@@ -1,0 +1,29 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    int x,a,y,sum=0;
+    cin>>x;
+    while(1)
+    {
+        cin>>a;
+        if(a>x)
+        {
+            y=a;
+            break;
+        }
+    }
+    int cnt=0;
+    for(int i=x;;i++)
+    {
+        sum+=i;
+        cnt++;
+        if(sum>=y) break;
+        
+    }
+    cout<<cnt<<'\n';
+ 
+    return 0;
+}
