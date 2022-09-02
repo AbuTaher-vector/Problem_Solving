@@ -1,0 +1,23 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    int n,x=0;
+   cin>>n;
+   for(int i=1;i<=n;i++)
+   { 
+        x++;
+       cout<<x<<" ";
+       x++;
+       cout<<x<<" ";
+       x++;
+       cout<<x<<" PUM\n";
+       x++;
+      
+       
+       
+   }
+    return 0;
+}
