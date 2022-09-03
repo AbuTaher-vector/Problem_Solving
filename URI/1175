@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    vector<int>v;
+    int t=20,x;
+    while(t--)
+    {
+        cin>>x;
+        v.push_back(x);
+    }
+    reverse(v.begin(),v.end());
+    for(int i=0;i<20;i++) cout<<"N["<<i<<"] = "<<v[i]<<'\n';
+ 
+    return 0;
+}
