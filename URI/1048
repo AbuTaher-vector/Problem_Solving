@@ -1,0 +1,18 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    double x;
+    int rate;
+    cin>>x;
+    if(x>=0 && x<=400.0) rate=15;
+    else if(x>400 && x<=800) rate=12;
+    else if(x>800 && x<=1200) rate=10;
+    else if(x>1200 && x<=2000) rate=7;
+    else rate=4;
+    printf("Novo salario: %.2lf\nReajuste ganho: %.2lf\nEm percentual: %d %\n",x+((x*rate)/100),(x*rate)/100,rate);
+ 
+    return 0;
+}
