@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ void code()
+ {
+     int x;
+     cin>>x;
+     bool flag=true;
+     for(int i=2;i<=sqrt(x);i++)
+     {
+         if(x%i==0)
+         {
+             flag=false;
+             break;
+         }
+     }
+     cout<<x<<" ";
+     if(flag) cout<<"eh primo\n";
+     else cout<<"nao eh primo\n";
+     
+ }
+int main() {
+ 
+   int tt;
+   cin>>tt;
+   while(tt--) code();
+ 
+    return 0;
+}
