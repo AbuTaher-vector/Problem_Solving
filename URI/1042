@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+   
+    vector<int>v;
+    int t=3,x;
+    while(t--)
+    {
+        cin>>x;
+        v.push_back(x);
+    }
+    vector<int>a(v.begin(),v.end());
+    sort(a.begin(),a.end());
+    for(auto x:a) cout<<x<<'\n';
+    cout<<'\n';
+    for(auto x:v) cout<<x<<"\n";
+ 
+    return 0;
+}
