@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    vector<double>v;
+    int t=3;
+    double x;
+    while(t--)
+    {
+        cin>>x;
+        v.push_back(x);
+    }
+    vector<double>a(v.begin(),v.end());
+    sort(a.begin(),a.end());
+    if(a[0]+a[1]<=a[2]) printf("Area = %.1lf\n",((v[0]+v[1])/2)*v[2]);
+    else printf("Perimetro = %.1lf\n",a[0]+a[1]+a[2]);
+    
+    return 0;
+}
