@@ -1,0 +1,13 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+  
+        double sum=1;
+   for(int i=3,j=2;i<=39;i+=2,j*=2) sum+=i/(j*1.0);
+   printf("%.2lf\n",sum);
+ 
+    return 0;
+}
