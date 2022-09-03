@@ -1,0 +1,21 @@
+#include <iostream>
+ 
+using namespace std;
+ 
+int main() {
+ 
+    int a=0,b=0,c=0,d=0;
+    int t=5,x;
+    while(t--)
+    {
+        cin>>x;
+        if(x%2==0) a++;
+        if(x%2==1) b++;
+        if(x>0) c++;
+        if(x<0) d++;
+        
+    }
+    cout<<a<<" valor(es) par(es)\n"<<b<<" valor(es) impar(es)\n"<<c<<" valor(es) positivo(s)\n"<<d<<" valor(es) negativo(s)\n";
+ 
+    return 0;
+}
