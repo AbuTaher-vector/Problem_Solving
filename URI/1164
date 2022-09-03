@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ void code()
+ {
+     int x;
+     cin>>x;
+     int sum=0;
+     for(int i=1;i<x;i++)
+     {
+         if(x%i==0) sum+=i;
+         
+     }
+     cout<<x<<" ";
+     if(sum==x) cout<<"eh perfeito\n";
+     else cout<<"nao eh perfeito\n";
+ }
+int main() {
+ int tt;
+ cin>>tt;
+ while(tt--) code();
+ 
+    return 0;
+}
