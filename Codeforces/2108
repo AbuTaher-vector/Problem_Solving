@@ -1,0 +1,21 @@
+class Solution {
+public:
+    string firstPalindrome(vector<string>& words) {
+        
+        string ans="";
+        for(auto x:words)
+        {
+            string a=x;
+            string b=x;
+            
+            reverse(b.begin(),b.end());
+            if(a==b)
+            {
+                ans=a;
+                break;
+            }
+        }
+        return ans;
+        
+    }
+};
