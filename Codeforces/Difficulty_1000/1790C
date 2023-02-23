@@ -1,0 +1,44 @@
+#include "bits/stdc++.h"
+using namespace std;
+void setup(){
+	#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif 
+}
+
+void code(){
+
+	int n;
+	cin>>n;
+	int arr[n][n];
+
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n-1;j++) cin >> arr[i][j];
+	}
+
+    map<int,int>mp;
+    int last;
+    for(int i=0;i<n;i++){
+    	mp[arr[i][n-2]]++;
+    	if(mp[arr[i][n-2]]>1) last = arr[i][n-2];
+    }
+    int indx;
+    for(int i=0;i<n;i++){
+    	if(mp[arr[i][n-2]]==1){
+    		indx=i;
+    		break;
+    	}
+    }
+    for(int j=0;j<n-1;j++) cout<<arr[indx][j]<<" ";
+    	cout<<last<<"\n";
+    
+}
+
+int main(){
+
+	setup();
+	int tt;
+	cin >> tt;
+	while(tt--) code();
+}
