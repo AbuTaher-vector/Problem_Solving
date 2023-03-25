@@ -1,0 +1,39 @@
+#include "bits/stdc++.h"
+using namespace std;
+void setup(){
+	#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif 
+}
+int main(){
+	setup();
+	
+    int n,last,pages=0;
+    cin>>n;
+    vector<int>v(7);
+    for(int i=0;i<7;i++) cin>>v[i];
+
+    for(int i=0;i<7;i++){
+        if(n-v[i]<=0){
+            cout<<i+1<<'\n';
+            return 0;
+        }
+        if(v[i]>0) last=i+1;
+        pages+=v[i];
+        n-=v[i];
+    }
+    int k=n%pages;
+    if(k==0){
+        cout<<last<<"\n";
+        return 0;
+    }
+         for(int i=0;i<7;i++){
+           if(k-v[i]<=0){
+            cout<<i+1<<'\n';
+            return 0;
+         }
+         k-=v[i];
+       }
+    
+}
