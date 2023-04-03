@@ -1,0 +1,32 @@
+#include "bits/stdc++.h"
+using namespace std;
+void setup(){
+	#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif 
+}
+void code(){
+    int n,k,d,w;
+    cin>>n>>k>>d>>w;
+    vector<long long int>v(n);
+    for(int i=0;i<n;i++) cin>>v[i];
+    long long int x=v[0]+w+d,ans=1 ,t=0;
+    for(int i=0;i<n;i++){
+        if(x>=v[i] && i-t<k) continue;
+        else{
+            t=i;
+            ans++;
+            x=v[i]+w+d;
+            i--;
+        }
+    }
+    cout<<ans<<'\n';
+}
+int main(){
+	setup();
+	
+    int tt;
+    cin>>tt;
+    while(tt--) code();
+}
