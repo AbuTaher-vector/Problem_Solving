@@ -1,0 +1,33 @@
+#include "bits/stdc++.h"
+using namespace std;
+void setup(){
+	#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif 
+}
+void code(){
+    int n;
+    cin>>n;
+    if(n%2==0){
+        cout<<n/2<<" "<<n/2<<'\n';
+    }else{
+        int flag = 0;
+        for(int i=3;i*i<=n;i+=2){
+            if(n%i==0){
+                flag++;
+                cout<<n/i<<" "<<n-n/i<<"\n";
+                break;
+            }
+        }
+        if(!flag) cout<<1<<" "<<n-1<<'\n';
+    }
+    
+}
+int main(){
+	setup();
+
+    int tt;
+    cin>>tt;
+    while(tt--) code();
+}
