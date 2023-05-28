@@ -1,0 +1,31 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n,x;
+	cin>>n;
+	vector<int>v;
+	for(int i=1;i<=n;i++) {
+       cin>>x;
+       if(x!=i) v.push_back(abs(x-i));
+	}
+	sort(v.begin(),v.end());
+	int ans=1;
+	for(int i=v[0];i>=2;i--){
+		int j;
+         for(j=0;j<v.size();j++){
+         	if(v[j]%i) break;
+         }
+         if(j==v.size()){
+         	ans=i;
+         	break;
+         }
+	}
+	cout<<ans<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
+
+// Link : https://codeforces.com/contest/1828/problem/B
