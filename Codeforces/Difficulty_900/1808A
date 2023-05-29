@@ -1,0 +1,25 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int l,r;
+	cin>>l>>r;
+	int mx=INT_MIN,ans;
+	for(int i=r;i>=l;i--){
+		int x=i;
+		int a=INT_MIN,b=INT_MAX;
+		while(x>0){
+             a=max(a,x%10);
+             b=min(b,x%10);
+             x/=10;
+		}
+		if(a-b>mx) mx=a-b,ans=i;
+		if(mx==9) break;
+	}
+	cout<<ans<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
+// Link : https://codeforces.com/contest/1808/problem/A
