@@ -1,0 +1,25 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n;
+	cin>>n;
+	if(n==1) cout<<1<<"\n";
+    else if(n%2) cout<<-1<<"\n";
+	else{
+       n/=2;
+       int k=2;
+       while(n--){
+       	cout<<k<<" "<<k-1<<" ";
+       	k+=2;
+       }
+       cout<<"\n";
+	}
+
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
+
+// Link : https://codeforces.com/contest/1818/problem/B
