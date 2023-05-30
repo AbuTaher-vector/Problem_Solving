@@ -1,0 +1,18 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	string s;
+	cin>>s;
+	if(s[1]=='b'){
+		cout<<s[0]<<" "<<s.substr(1,s.size()-2)<<" "<<s.back()<<"\n";
+	} else {
+		cout<<s[0]<<" "<<s[1]<<" "<<s.substr(2)<<"\n";
+	}
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
+
+// Link : https://codeforces.com/contest/1775/problem/A2
