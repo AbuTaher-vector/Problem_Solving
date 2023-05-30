@@ -1,0 +1,32 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n;
+	cin>>n;
+	if(n==3) cout<<"NO\n";
+	else {
+		cout<<"YES\n";
+		if(n%2==0) {
+			n/=2;
+		while(n--){
+			cout<<1<<" "<<-1<<" ";
+		    }
+		} else {
+			n/=2;
+			int k=n;
+			while(k--){
+				cout<<(n-1)*-1<<" "<<n<<" ";
+			}
+			cout<<(n-1)*-1;
+		}
+		
+		cout<<"\n";
+	}
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
+
+// Link : https://codeforces.com/problemset/problem/1779/B
