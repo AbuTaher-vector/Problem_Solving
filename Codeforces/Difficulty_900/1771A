@@ -1,0 +1,27 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n,x;
+	cin>>n;
+	map<int,long long int>mp;
+	while(n--){
+         cin>>x;
+         mp[x]++;
+	}
+	if(mp.size()==1){
+		long long int x = mp.begin()->second;
+		x--;
+		x = x*(x+1);
+		cout<<x<<"\n";
+	}
+	else {
+		cout<<mp.begin()->second*mp.rbegin()->second*2<<"\n";
+	}
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
+
+// Link : https://codeforces.com/problemset/problem/1771/A
