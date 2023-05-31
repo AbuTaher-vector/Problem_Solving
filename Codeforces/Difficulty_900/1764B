@@ -1,0 +1,25 @@
+#include "bits/stdc++.h"
+using namespace std;
+int gcd(int a , int b)
+{
+   if(b==0) return a;
+   a%=b;
+   return gcd(b,a);
+}
+void code(){
+	int n;
+	cin>>n;
+	vector<int>v(n);
+	cin>>v[0];
+    int x = v[0];
+    for(int i=1;i<n;i++){
+    	cin>>v[i];
+    	x = gcd(v[i], x);
+    }
+    cout<<v.back()/x<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
