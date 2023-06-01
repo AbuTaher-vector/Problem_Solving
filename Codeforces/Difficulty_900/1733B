@@ -1,0 +1,26 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n,x,y;
+	cin>>n>>x>>y;
+	if(x>0 && y>0) cout<<-1<<"\n";
+	else if (x==0 && y==0) cout<<-1<<"\n";
+	else{
+		x=max(x,y);
+		if((n-1)%x) cout<<-1<<"\n";
+		else{
+			int t = 1;
+			for(int i=2;i<=n;i++){
+				cout<<t<<" ";
+				if((i-1)%x==0) t=i+1;
+			}
+			cout<<"\n";
+		}
+	}
+
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
