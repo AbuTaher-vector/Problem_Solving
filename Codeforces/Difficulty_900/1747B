@@ -1,0 +1,20 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n;
+	cin>>n;
+	int t=n/2;
+	if(n%2) t++;
+	int x=1,y=3*n;
+	cout<<t<<"\n";
+	while(t--) {
+		cout<<x<<" "<<y<<"\n";
+		x+=3,y-=3;
+	}
+
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
