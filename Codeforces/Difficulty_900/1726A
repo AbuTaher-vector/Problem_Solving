@@ -1,0 +1,33 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n;
+	cin>>n;
+	vector<int>v(n);
+	int mn=INT_MAX,mx=INT_MIN,mx2=INT_MIN;
+	cin>>v[0];
+	mn=min(mn,v[0]);
+	mx=max(mx,v[0]);
+	for(int i=1;i<n;i++){
+		cin>>v[i];
+		mx2=max(mx2,v[i-1]-v[i]);
+		mn=min(mn,v[i]);
+		mx=max(mx,v[i]);
+	}
+	mx2=max(mx2,v.back()-v[0]);
+	if(n==1) cout<<0<<"\n";
+	else if(v[0]==mn || v.back()==mx) cout<<mx-mn<<"\n";
+	else {
+		int x=INT_MIN,y=INT_MIN;
+		if(v[0]!=mx) x=mx-v[0];
+		if(v.back()!=mn) y=v.back()-mn;
+		cout<<max(mx2,max(x,y))<<"\n";
+	}
+
+
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}  
