@@ -29,5 +29,5 @@ void code(){
 int main(){
 	int tt;
 	cin>>tt;
-	while(tt--) code();
+	while(tt--)  code();
 }  
