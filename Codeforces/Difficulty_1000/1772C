@@ -1,0 +1,26 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n,k;
+	cin>>n>>k;
+	int x=1,y=1;
+	cout<<1<<" ";
+	n--;
+	while(n>0){
+	   x+=y;
+      if(k-(x+y)<n-1) break;
+      cout<<x<<" ";
+      y++;
+      n--;
+	}
+	while(n--){
+		cout<<x<<" ";
+		x++;
+	}
+	cout<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}  
