@@ -1,0 +1,29 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n,k;
+	cin>>n>>k;
+	int a=n,b=1;
+	int t=n/k;
+	while(t--){
+		int r=k-1;
+		while(r--){
+			cout<<a<<" ";
+			a--;
+		}
+		cout<<b<<" ";
+		b++;
+	}
+	int r=n%k;
+	while(r--) {
+		cout<<a<<" ";
+		a--;
+	}
+	cout<<"\n";
+
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}  
