@@ -1,0 +1,32 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n;
+	char x;
+	string s;
+	cin>>n>>x>>s;
+	s+=s;
+	vector<int>v;
+	if(x=='g'){
+		cout<<0<<"\n";
+		return;
+	}
+	for(int i=0;i<s.size();i++) {
+       int cnt=1;
+       if(s[i]==x){
+       	i++;
+       	while(i<s.size() && s[i]!='g'){
+       		i++;
+       		cnt++;
+       	}
+       	if(s[i]=='g') v.push_back(cnt);
+       }
+	}
+	sort(v.begin(),v.end());
+	cout<<v.back()<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}  
