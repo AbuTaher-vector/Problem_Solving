@@ -1,0 +1,30 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+	int n;
+	cin>>n;
+	int x;
+	map<int,vector<int> >mp;
+	for(int i=1;i<=n;i++) {
+        cin>>x;
+        mp[x].push_back(i);
+	}
+	for(int i=1;i<=n;i++){
+         if(mp[i].size()<=1) cout<<mp[i].size()<<" ";
+         else {
+         	int cnt=1;
+         	for(int j=1;j<mp[i].size();j++){
+                   int tag = mp[i][j]-mp[i][j-1];
+                   tag--;
+                   if(tag%2==0) cnt++;
+         	}
+         	cout<<cnt<<" ";
+         }
+	} cout<<"\n";
+
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}  
