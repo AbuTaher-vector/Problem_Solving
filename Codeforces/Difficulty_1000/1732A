@@ -1,0 +1,37 @@
+#include "bits/stdc++.h"
+using namespace std;
+int GCD(int x,int y){
+     if(y==0) return x;
+     x = x%y;
+	 return GCD(y,x);
+}
+void code(){
+     int n;
+     cin>>n;
+     vector<int>v(n);
+     cin>>v[0];
+     int gcd = v[0];
+     for(int i=1;i<n;i++){
+     	cin>>v[i];
+         gcd = GCD(gcd,v[i]);
+     }
+     vector<int>k;
+     if(gcd==1){
+     	cout<<0<<"\n";
+     	return;
+     }
+     if(GCD(GCD(v[n-1],n),gcd)==1) v.push_back(1);
+     else v.push_back(3);
+
+     if(GCD(GCD(v[n-2],n-1),gcd)==1) v.push_back(2);
+     v.push_back(n);
+     sort(v.begin(),v.end());
+     cout<<v[0]<<"\n";
+
+
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}  
