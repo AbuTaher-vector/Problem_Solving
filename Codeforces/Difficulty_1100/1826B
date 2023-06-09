@@ -1,0 +1,41 @@
+#include "bits/stdc++.h"
+using namespace std;
+int __gcd(int x,int y){
+	if(y==0) return x;
+	x=x%y;
+	return __gcd(y,x);
+}
+void code(){
+   int n;
+   cin>>n;
+   vector<int>v(n);
+   for(int i=0;i<n;i++){
+   	    cin>>v[i];
+   }
+   int l=0,r=n-1;
+   bool flag = true;
+   while(l<r){
+   	    if(v[l]!=v[r]){
+   	    	flag = false;
+   	    	break;
+   	    }
+   	    l++,r--;
+   } 
+   if(flag){
+   	cout<<0<<"\n";
+   	return;
+   }
+   int ans=0;
+   l=0,r=n-1;
+   while(l<r){
+   	   int t = max(v[l],v[r])-min(v[l],v[r]);
+   	   if(t!=0) ans = __gcd(ans,t);
+       l++,r--;
+   }
+   cout<<ans<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}  
