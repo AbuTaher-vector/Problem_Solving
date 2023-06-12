@@ -1,0 +1,28 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+   int n;
+   cin>>n;
+   int x;
+   map<int,int>mp;
+   long long int ans=0;
+   for(int i=1;i<=n;i++){
+       cin>>x;
+       if(x!=0){
+          mp[x]++;
+       }else{
+         if(!mp.empty()){
+             int t = mp.rbegin()->first;
+             if(mp[t]>0) ans+=t,mp[t]--;
+             if(mp[t]==0) mp.erase(t);
+
+         }
+       }
+   }
+   cout<<ans<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}  
