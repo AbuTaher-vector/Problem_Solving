@@ -1,0 +1,25 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+  int n,c;
+  cin>>n>>c;
+  vector<int>v(n+1);
+  for(int i=1;i<=n;i++){
+      cin>>v[i];
+      v[i]+=i;
+  }
+  sort(v.begin()+1,v.end());
+  long long int ans=0;
+  for(int i=1;i<=n;i++){
+      if(v[i]<=c){
+        ans++;
+        c-=v[i];
+      }
+  }
+  cout<<ans<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+} 
