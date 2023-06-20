@@ -1,0 +1,22 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+   int n;
+   cin>>n;
+   vector<int>v(n);
+   for(int i=0;i<n;i++){
+    cin>>v[i];
+   }
+   if(v[0]!=n && v.back()!=n){
+    cout<<-1<<"\n";
+    return;
+   }
+   reverse(v.begin(),v.end());
+   for(int i=0;i<n;i++) cout<<v[i]<<" ";
+    cout<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+} 
