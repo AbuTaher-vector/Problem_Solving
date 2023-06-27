@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+void code(){
+   long long int n,x,t;
+   cin>>n>>x>>t;
+   long long int k=t/x;
+   if(k>=n) {
+      k=n-1;
+      cout<<(k*(k+1))/2<<"\n";
+   }else{
+       long long int r=n-k-1;
+       long long int ans=r*k;
+       ans+=(k*(k+1))/2;
+       cout<<ans<<"\n";
+   }
+}
+int main(){
+  int tt;
+  cin>>tt;
+  while(tt--) code();
+}
