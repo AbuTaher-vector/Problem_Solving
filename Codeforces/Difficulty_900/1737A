@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+void code(){
+  int n,k;
+  cin>>n>>k;
+  string s;
+  cin>>s;
+  string ans;
+  vector<int>v(26,0);
+  for(auto x:s) v[x-'a']++;
+  for(int i=1;i<=k;i++){
+       int j=0;
+      for(;j<n/k;j++){
+          if(v[j]==0){
+              break;
+          }
+          v[j]--;
+      }
+      ans.push_back('a'+j);
+  } 
+  cout<<ans<<"\n";
+}
+int main(){
+  int tt;
+  cin>>tt;
+  while(tt--) code();
+}
