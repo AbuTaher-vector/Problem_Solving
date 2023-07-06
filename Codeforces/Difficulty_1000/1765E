@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+void code(){
+  int n,a,b;
+  cin>>n>>a>>b;
+  if(b>=a){
+     int ans=n/a;
+     if(n%a!=0) ans++;
+     cout<<ans<<"\n";
+  }else cout<<1<<"\n";
+}
+int main(){
+    int tt;
+    cin>>tt;
+    while(tt--) code();
+}
