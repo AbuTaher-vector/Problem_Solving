@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+void code(){
+  int n,m;
+  cin>>n>>m;
+     int x=n/3;
+     x = x*m;
+     int t = m/3;
+     if(m%3) t++;
+     x+=(n%3)*t;
+
+     int y=m/3;
+     y = y*n;
+     int k = n/3;
+     if(n%3) k++;
+     y+=(m%3)*k;
+
+     cout<<min(x,y)<<"\n";
+}
+int main(){
+  int tt;
+  cin>>tt;
+  while(tt--) code();
+}
