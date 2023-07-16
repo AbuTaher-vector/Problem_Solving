@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+void code(){
+  vector<int>v(6);
+  for(int i=0;i<6;i++) cin>>v[i];
+  int ans=1;
+  if(v[0]>v[2] && v[0]>v[4]) ans+=v[0]-max(v[4],v[2]);
+  else if(v[0]<v[2] && v[0]<v[4]) ans+=min(v[4],v[2])-v[0];
+  
+  if(v[1]>v[3] && v[1]>v[5]) ans+=v[1]-max(v[3],v[5]);
+  else if(v[1]<v[3] && v[1]<v[5]) ans+=min(v[3],v[5])-v[1];
+  cout<<ans<<"\n";
+}
+int main(){
+  int tt;
+  cin>>tt;
+  while(tt--) code();
+}
