@@ -1,0 +1,19 @@
+#include "bits/stdc++.h"
+using namespace std;
+void code(){
+  long long int a;
+  cin>>a;
+  int ans=0;
+  int div=1;
+  while(a%div==0){
+    ans++;
+    div++;
+  }
+  cout<<ans<<"\n";
+
+}
+int main(){
+  int tt;
+  cin>>tt;
+  while(tt--) code();
+}
