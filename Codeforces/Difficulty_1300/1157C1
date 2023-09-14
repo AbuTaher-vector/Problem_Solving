@@ -1,0 +1,45 @@
+#include "bits/stdc++.h"
+using namespace std;
+int main(){
+  int n;
+  cin>>n;
+  vector<int>v(n);
+  for(int i=0;i<n;i++) cin>>v[i];
+  int left=0,right=n-1;
+  string ans;
+  vector<int>k;
+  if(v[left]<=v[right]){
+    ans.push_back('L');
+    k.push_back(v[left]);
+    left++;
+  }else{
+    ans.push_back('R');
+    k.push_back(v[right]);
+    right--;
+  }
+  while(left<=right && max(v[left],v[right])>k.back()){
+       if(v[left]<=v[right]){
+           if(v[left]>k.back()){
+                 ans.push_back('L');
+                 k.push_back(v[left]);
+                 left++;
+           }else{
+                 ans.push_back('R');
+                 k.push_back(v[right]);
+                 right--;
+           }    
+       }else{
+          if(v[right]>k.back()){
+                 ans.push_back('R');
+                 k.push_back(v[right]);
+                 right--;
+          }else{
+                 ans.push_back('L');
+                 k.push_back(v[left]);
+                 left++;
+          }
+       }
+  }
+      
+  cout<<ans.size()<<"\n"<<ans<<"\n";
+}
