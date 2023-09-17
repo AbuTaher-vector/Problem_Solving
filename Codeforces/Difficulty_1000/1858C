@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+void code(){
+     int n;
+     cin>>n;
+     vector<int>v(n+1);
+     for(int i=n;i>=1;i--){
+     	 if(!v[i]){
+     	 	cout<<i<<" ";
+     	 	v[i]++;
+     	 	int k=i;
+     	 	while(k%2==0){
+     	 		cout<<k/2<<" ";
+     	 		v[k/2]++;
+     	 		k/=2;
+     	 	}
+     	 }
+     }
+     cout<<"\n";
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
