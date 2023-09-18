@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+void code(){
+     int n,m,k;
+     cin>>n>>m>>k;
+     int x,y;
+     cin>>x>>y;
+     string ans="YES";
+     int a,b;
+     while(k--){
+     	cin>>a>>b;
+     	if((abs(x-a)+abs(y-b))%2==0) ans="NO";
+     }
+     cout<<ans<<"\n";
+    
+}
+int main(){
+	int tt;
+	cin>>tt;
+	while(tt--) code();
+}
